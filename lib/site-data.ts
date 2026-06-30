@@ -5,6 +5,12 @@ export const siteConfig = {
   email: "hello@halfabilagency.com",
   phone: "(401) 217-9799",
   phoneTel: "4012179799",
+  /** Calendly booking page for discovery calls. */
+  bookingUrl: "https://calendly.com/bferrell514",
+  /** Replace starterPaymentUrl and systemPaymentUrl with real Stripe Payment Links. */
+  starterPaymentUrl: "#",
+  systemPaymentUrl: "#",
+  customQuoteUrl: "#contact",
   social: {
     instagram: "#",
     linkedin: "#",
@@ -19,6 +25,14 @@ export const navLinks = [
   { label: "Pricing", href: "#pricing" },
   { label: "Start a Project", href: "#contact" },
 ];
+
+/** Calendly until bookingUrl is replaced; falls back to project form. */
+export function getBookingHref(): string {
+  if (siteConfig.bookingUrl.includes("YOUR-CALENDLY-LINK")) {
+    return "#contact";
+  }
+  return siteConfig.bookingUrl;
+}
 
 export const footerLinks = [
   { label: "Services", href: "#services" },
