@@ -5,6 +5,15 @@ import { FadeInSection } from "@/components/FadeInSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { githubProfileUrl, recentBuilds } from "@/lib/intake";
 
+const previewImageProps = {
+  fill: true as const,
+  quality: 100,
+  unoptimized: true,
+  sizes: "(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px",
+  className:
+    "object-cover object-top [image-rendering:-webkit-optimize-contrast]",
+};
+
 function BuildPreview({
   title,
   category,
@@ -26,25 +35,13 @@ function BuildPreview({
         href={liveUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="block h-full"
+        className="block h-full w-full"
         aria-label={`View live ${title} site`}
       >
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-          className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-          sizes="(max-width: 768px) 100vw, 33vw"
-        />
+        <Image src={imageSrc} alt={imageAlt} {...previewImageProps} />
       </a>
     ) : (
-      <Image
-        src={imageSrc}
-        alt={imageAlt}
-        fill
-        className="object-cover object-top"
-        sizes="(max-width: 768px) 100vw, 33vw"
-      />
+      <Image src={imageSrc} alt={imageAlt} {...previewImageProps} />
     )
   ) : (
     <div className="flex h-full flex-col items-center justify-center gap-3 p-6 text-center">
@@ -69,7 +66,7 @@ function BuildPreview({
         <span className="h-2 w-2 rounded-full bg-green-500/70" />
         <span className="ml-2 truncate text-[11px] text-zinc-500">{title}</span>
       </div>
-      <div className="relative aspect-[16/10] bg-gradient-to-br from-brand-charcoal via-black to-brand-charcoal">
+      <div className="relative aspect-[16/10] min-h-[220px] bg-zinc-950 sm:min-h-[260px] lg:min-h-[300px]">
         {preview}
       </div>
       <div className="px-4 py-3">
@@ -94,7 +91,7 @@ export function RecentBuildsSection() {
           />
         </FadeInSection>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
           {recentBuilds.map((build, index) => (
             <FadeInSection key={build.title} delay={index * 80}>
               <article className="gradient-border flex h-full flex-col overflow-hidden rounded-2xl glass-card glass-card-hover">
