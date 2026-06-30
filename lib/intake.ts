@@ -170,15 +170,15 @@ export const recentBuilds: RecentBuild[] = [
     language: "TypeScript",
   },
   {
-    title: "Jackerbox",
-    category: "Marketplace · Payments",
+    title: "AI Legal Agent",
+    category: "AI Workflow · Legal Tech",
     description:
-      "Peer-to-peer equipment rental with Stripe Identity verification, admin tools, and rental workflows.",
-    imageSrc: "/work/jackerbox.png",
-    imageAlt: "Jackerbox equipment rental marketplace preview",
-    liveUrl: "https://jackerbox.app",
-    githubUrl: "https://github.com/BTheCoderr/jackerboxV2",
-    language: "TypeScript",
+      "OpenAI-powered assistant for automating custody and criminal case workflows.",
+    imageSrc: "/work/ailegalagent.png",
+    imageAlt: "AI Legal Agent case workflow assistant preview",
+    liveUrl: "https://ailegagent.netlify.app",
+    githubUrl: "https://github.com/BTheCoderr/AiLegalAgent",
+    language: "JavaScript",
   },
 ];
 
