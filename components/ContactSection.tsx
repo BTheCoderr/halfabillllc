@@ -5,13 +5,28 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { budgetOptions, siteConfig, timelineOptions } from "@/lib/site-data";
 import { serviceOptions } from "@/lib/brand";
 
+/** Netlify Forms on Next.js must POST to a static HTML path, not `/`. */
+const NETLIFY_FORM_ACTION = "/netlify-form.html";
+
 const inputClass =
   "w-full rounded-xl border border-white/10 bg-black/50 px-4 py-4 text-base text-white placeholder:text-zinc-600 transition-all duration-200 focus:border-brand-orange/50 focus:outline-none focus:ring-2 focus:ring-brand-orange/20";
 
 const labelClass = "mb-2.5 block text-sm font-medium text-zinc-300";
 
-const encode = (data: Record<string, string>) =>
-  new URLSearchParams(data).toString();
+function buildEncodedBody(form: HTMLFormElement): string {
+  const formData = new FormData(form);
+  const params = new URLSearchParams();
+
+  formData.forEach((value, key) => {
+    params.append(key, String(value));
+  });
+
+  if (!params.get("form-name")) {
+    params.set("form-name", "project-request");
+  }
+
+  return params.toString();
+}
 
 export function ContactSection() {
   const [submitting, setSubmitting] = useState(false);
@@ -23,33 +38,24 @@ export function ContactSection() {
     setError(null);
 
     const form = event.currentTarget;
-    const formData = new FormData(form);
-
-    const data: Record<string, string> = {
-      "form-name": "project-request",
-    };
-
-    formData.forEach((value, key) => {
-      data[key] = String(value);
-    });
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch(NETLIFY_FORM_ACTION, {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: encode(data),
+        body: buildEncodedBody(form),
       });
 
       if (!response.ok) {
-        throw new Error("Form submission failed");
+        throw new Error(`Form submission failed (${response.status})`);
       }
 
       window.location.href = "/thank-you";
     } catch {
       setError(
-        `Something went wrong sending your request. Please try again or call ${siteConfig.phone}.`
+        `Something went wrong sending your request. Please try again, call ${siteConfig.phone}, or book a call on Calendly.`
       );
       setSubmitting(false);
     }
@@ -71,6 +77,7 @@ export function ContactSection() {
           <form
             name="project-request"
             method="POST"
+            action={NETLIFY_FORM_ACTION}
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
@@ -208,7 +215,10 @@ export function ContactSection() {
             </div>
 
             {error && (
-              <p className="rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300" role="alert">
+              <p
+                className="rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300"
+                role="alert"
+              >
                 {error}
               </p>
             )}

@@ -36,8 +36,9 @@ The live site at **Half A Bil Agency** should only expose:
 - **Site:** Deployed from GitHub (`halfabillllc`)
 - **Form name:** `project-request` (Netlify Forms)
 - **Detection:** `public/netlify-form.html` + `NetlifyFormBootstrap` in layout
-- **Submit:** URL-encoded POST to `/` → redirect `/thank-you`
-- **Notifications:** Netlify → Forms → Email notifications
+- **Submit:** URL-encoded POST to **`/netlify-form.html`** (not `/`) → redirect `/thank-you`
+- **Why:** Next.js on Netlify intercepts POST to `/`; static path is required ([Netlify + Next.js forms](https://opennext.js.org/netlify/forms))
+- **Notifications:** Netlify → Project configuration → Notifications → Form submission → **project-request** → your email (see [NETLIFY_FORM_EMAIL.md](./NETLIFY_FORM_EMAIL.md))
 
 ### 2. CRM — HubSpot Free
 
