@@ -3,7 +3,8 @@ export const siteConfig = {
   brandLine: "Full Service Half A Bil",
   tagline: "Websites. Apps. Automations.",
   email: "hello@halfabilagency.com",
-  phone: "Add phone number here",
+  phone: "(401) 217-9799",
+  phoneTel: "4012179799",
   social: {
     instagram: "#",
     linkedin: "#",
@@ -16,14 +17,14 @@ export const navLinks = [
   { label: "Process", href: "#process" },
   { label: "Systems", href: "#systems" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Start a Project", href: "#contact" },
 ];
 
 export const footerLinks = [
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Start a Project", href: "#contact" },
 ];
 
 export const problemCards = [

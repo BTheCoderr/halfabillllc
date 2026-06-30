@@ -44,6 +44,19 @@ select option {
   color: #ffffff;
 }
 
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: rgba(239, 68, 68, 0.55);
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.15);
+}
+
+input,
+select,
+textarea {
+  scroll-margin-top: 6rem;
+}
+
 .grid-bg {
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
