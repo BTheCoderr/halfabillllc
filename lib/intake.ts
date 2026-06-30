@@ -137,14 +137,14 @@ export const recentBuilds: RecentBuild[] = [
     language: "Python",
   },
   {
-    title: "Escape Ramp",
-    category: "SaaS · Migration Tool",
+    title: "Klubhouse Therapy Services",
+    category: "Healthcare Website · Intake Forms",
     description:
-      "QuickBooks Desktop migration product with AI-guided setup, transparent pricing, and analytics.",
-    imageSrc: "/work/escape-ramp.png",
-    imageAlt: "Escape Ramp QuickBooks migration SaaS preview",
-    liveUrl: "https://escape-ramp.vercel.app",
-    githubUrl: "https://github.com/BTheCoderr/EscapeRamp",
+      "ABA therapy services site with patient intake, insurance info, contact forms, and CHRIS values branding for Atlanta families.",
+    imageSrc: "/work/klubhouse-therapy.png",
+    imageAlt: "Klubhouse Therapy Services website preview",
+    liveUrl: "https://klubhousetherapyservices.com",
+    githubUrl: "https://github.com/BTheCoderr/Klubhouse-Therapy-Services",
     language: "TypeScript",
   },
   {
@@ -170,14 +170,14 @@ export const recentBuilds: RecentBuild[] = [
     language: "TypeScript",
   },
   {
-    title: "AI Legal Agent",
-    category: "AI Workflow · Legal Tech",
+    title: "Refined Spaces",
+    category: "Property Management · Lead Gen",
     description:
-      "OpenAI-powered assistant for automating custody and criminal case workflows.",
-    imageSrc: "/work/ailegalagent.png",
-    imageAlt: "AI Legal Agent case workflow assistant preview",
-    liveUrl: "https://ailegagent.netlify.app",
-    githubUrl: "https://github.com/BTheCoderr/AiLegalAgent",
+      "Boutique property management site for curated stays in Providence with owner services, guest experience, and inquiry forms.",
+    imageSrc: "/work/refined-spaces.png",
+    imageAlt: "Refined Spaces property management website preview",
+    liveUrl: "https://refinedspacesne.com",
+    githubUrl: "https://github.com/BTheCoderr/refined-spaces",
     language: "JavaScript",
   },
 ];
