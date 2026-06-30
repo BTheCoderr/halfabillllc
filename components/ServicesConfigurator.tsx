@@ -39,7 +39,7 @@ export function ServicesConfigurator() {
         <SectionHeading
           eyebrow="Quick Start"
           title="Pick what you need built"
-          subtitle="Choose a starting point. We will pre-fill the project form so you can send details in under a minute."
+          subtitle="Tap a chip — we scroll to the form and pre-fill your service, budget, and message."
         />
 
         <div className="mt-10 flex flex-wrap justify-center gap-3">

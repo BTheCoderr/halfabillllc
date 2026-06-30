@@ -6,6 +6,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { ServicesConfigurator } from "@/components/ServicesConfigurator";
 import { WhatWeBuildSection } from "@/components/WhatWeBuildSection";
 import { RecentBuildsSection } from "@/components/RecentBuildsSection";
+import { BuiltSystemsFlowSection } from "@/components/BuiltSystemsFlowSection";
 import { LiveSystemStackSection } from "@/components/LiveSystemStackSection";
 import { TechCapabilitiesSection } from "@/components/TechCapabilitiesSection";
 import { WhyAgencySection } from "@/components/WhyAgencySection";
@@ -29,6 +30,7 @@ export default function Home() {
         <ServicesConfigurator />
         <WhatWeBuildSection />
         <RecentBuildsSection />
+        <BuiltSystemsFlowSection />
         <LiveSystemStackSection />
         <TechCapabilitiesSection />
         <WhyAgencySection />
