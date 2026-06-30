@@ -1,3 +1,6 @@
+"use client";
+
+import { FormEvent, useState } from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { budgetOptions, timelineOptions } from "@/lib/site-data";
 import { serviceOptions } from "@/lib/brand";
@@ -7,7 +10,51 @@ const inputClass =
 
 const labelClass = "mb-2 block text-sm font-medium text-zinc-300";
 
+const encode = (data: Record<string, string>) =>
+  new URLSearchParams(data).toString();
+
 export function ContactSection() {
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setSubmitting(true);
+    setError(null);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const data: Record<string, string> = {
+      "form-name": "project-request",
+    };
+
+    formData.forEach((value, key) => {
+      data[key] = String(value);
+    });
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: encode(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      window.location.href = "/thank-you";
+    } catch {
+      setError(
+        "Something went wrong sending your request. Please try again or email hello@halfabilagency.com."
+      );
+      setSubmitting(false);
+    }
+  }
+
   return (
     <section id="contact" className="relative py-24 lg:py-32">
       <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/40 to-transparent" />
@@ -19,7 +66,7 @@ export function ContactSection() {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          action="/thank-you"
+          onSubmit={handleSubmit}
           className="glass-card space-y-5 rounded-2xl p-6 sm:p-8"
         >
           <input type="hidden" name="form-name" value="project-request" />
@@ -27,7 +74,7 @@ export function ContactSection() {
           <p className="hidden">
             <label>
               Don&apos;t fill this out:
-              <input name="bot-field" />
+              <input name="bot-field" tabIndex={-1} autoComplete="off" />
             </label>
           </p>
 
@@ -148,11 +195,18 @@ export function ContactSection() {
             />
           </div>
 
+          {error && (
+            <p className="text-sm text-red-400" role="alert">
+              {error}
+            </p>
+          )}
+
           <button
             type="submit"
-            className="w-full rounded-xl bg-brand-orange px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-orange/20 transition-all duration-300 hover:bg-brand-orange-light hover:shadow-brand-orange/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange sm:w-auto"
+            disabled={submitting}
+            className="w-full rounded-xl bg-brand-orange px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-orange/20 transition-all duration-300 hover:bg-brand-orange-light hover:shadow-brand-orange/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
           >
-            Send Project Request
+            {submitting ? "Sending..." : "Send Project Request"}
           </button>
         </form>
 
