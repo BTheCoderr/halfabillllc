@@ -115,17 +115,6 @@ export const githubProfileUrl = "https://github.com/BTheCoderr";
 /** Real builds from github.com/BTheCoderr — live demos and repos, no invented metrics. */
 export const recentBuilds: RecentBuild[] = [
   {
-    title: "Half A Bil Agency",
-    category: "Website · Forms · Booking",
-    description:
-      "Agency site with project intake, Calendly discovery calls, and deposit checkout flow.",
-    imageSrc: "/work/half-a-bil-agency.png",
-    imageAlt: "Half A Bil Agency website homepage preview",
-    liveUrl: "https://halfabilagency.netlify.app",
-    githubUrl: "https://github.com/BTheCoderr/halfabillllc",
-    language: "TypeScript",
-  },
-  {
     title: "SmartProBono",
     category: "AI Platform · Legal Tech",
     description:
@@ -179,6 +168,17 @@ export const recentBuilds: RecentBuild[] = [
     liveUrl: "https://refinedspacesne.com",
     githubUrl: "https://github.com/BTheCoderr/refined-spaces",
     language: "JavaScript",
+  },
+  {
+    title: "Half A Bil Agency",
+    category: "Website · Forms · Booking",
+    description:
+      "Agency site with project intake, Calendly discovery calls, and deposit checkout flow.",
+    imageSrc: "/work/half-a-bil-agency.png",
+    imageAlt: "Half A Bil Agency website homepage preview",
+    liveUrl: "https://halfabilagency.netlify.app",
+    githubUrl: "https://github.com/BTheCoderr/halfabillllc",
+    language: "TypeScript",
   },
 ];
 
