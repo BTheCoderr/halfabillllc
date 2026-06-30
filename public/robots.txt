@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Internal routes — do not index if ever created by mistake
+Disallow: /crm-setup
+Disallow: /outreach-system
+
+Sitemap: https://halfabilagency.com/sitemap.xml

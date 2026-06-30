@@ -29,11 +29,16 @@ export function Button({
   const base =
     "inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange";
 
+  const isExternal = href.startsWith("http");
+
   return (
     <Link
       href={href}
       className={`${base} ${variants[variant]} ${className}`}
       onClick={onClick}
+      {...(isExternal
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {})}
     >
       {children}
     </Link>

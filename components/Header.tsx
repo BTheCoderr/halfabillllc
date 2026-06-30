@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/Logo";
-import { navLinks } from "@/lib/site-data";
+import { getBookingHref, navLinks } from "@/lib/site-data";
 import { Button } from "@/components/ui/Button";
 
 export function Header() {
@@ -25,6 +25,7 @@ export function Header() {
   }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
+  const bookingHref = getBookingHref();
 
   return (
     <header
@@ -44,7 +45,7 @@ export function Header() {
           <Logo
             variant="mark"
             size="sm"
-            className="sm:hidden"
+            className="h-10 w-10 sm:hidden"
             decorative
           />
           <Logo
@@ -61,7 +62,7 @@ export function Header() {
         >
           {navLinks.map((link) => (
             <Link
-              key={link.href}
+              key={link.href + link.label}
               href={link.href}
               className="text-sm font-medium text-zinc-400 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange"
             >
@@ -71,7 +72,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="#contact">Book a Free Call</Button>
+          <Button href={bookingHref}>Book a Free Call</Button>
         </div>
 
         <button
@@ -94,7 +95,7 @@ export function Header() {
         >
           <ul className="flex flex-col gap-1">
             {navLinks.map((link) => (
-              <li key={link.href}>
+              <li key={link.href + link.label}>
                 <Link
                   href={link.href}
                   className="block rounded-xl px-4 py-3.5 text-base font-medium text-zinc-300 transition-colors hover:bg-white/5 hover:text-white"
@@ -105,7 +106,7 @@ export function Header() {
               </li>
             ))}
             <li className="pt-4">
-              <Button href="#contact" className="w-full" onClick={closeMenu}>
+              <Button href={bookingHref} className="w-full" onClick={closeMenu}>
                 Book a Free Call
               </Button>
             </li>

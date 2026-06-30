@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import { siteConfig } from "@/lib/site-data";
+import { getBookingHref, siteConfig } from "@/lib/site-data";
 
 export function CTASection() {
   return (
@@ -20,7 +21,7 @@ export function CTASection() {
               will help you figure out the cleanest path forward.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Button href="#contact">Book a Free Call</Button>
+              <Button href={getBookingHref()}>Book a Free Call</Button>
               <Button href="#contact" variant="secondary">
                 Submit a Project Request
               </Button>

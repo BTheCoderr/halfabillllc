@@ -1,8 +1,8 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { HeroDashboard } from "@/components/HeroDashboard";
-import { Logo } from "@/components/Logo";
-import { siteConfig } from "@/lib/site-data";
+import { HeroBrandLockup } from "@/components/HeroBrandLockup";
+import { getBookingHref, siteConfig } from "@/lib/site-data";
 
 export function Hero() {
   return (
@@ -18,14 +18,7 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <div>
-          <div className="mb-6 hidden lg:block">
-            <Logo variant="stacked" size="lg" className="opacity-95" />
-          </div>
-
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand-orange/30 bg-brand-orange/10 px-4 py-2 text-xs font-semibold tracking-wide text-brand-orange">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand-orange animate-pulse-glow" />
-            {siteConfig.brandLine}
-          </p>
+          <HeroBrandLockup />
 
           <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[3.25rem]">
             Websites, Apps, and Automations Built for Businesses That Need to{" "}
@@ -40,7 +33,7 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button href="#contact">
+            <Button href={getBookingHref()}>
               Book a Free Call
               <ArrowRight className="h-4 w-4" />
             </Button>

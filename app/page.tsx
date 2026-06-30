@@ -8,6 +8,7 @@ import { ProcessSection } from "@/components/ProcessSection";
 import { UseCasesSection } from "@/components/UseCasesSection";
 import { FounderSection } from "@/components/FounderSection";
 import { CTASection } from "@/components/CTASection";
+import { PaymentSection } from "@/components/PaymentSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
@@ -25,6 +26,7 @@ export default function Home() {
         <UseCasesSection />
         <FounderSection />
         <CTASection />
+        <PaymentSection />
         <ContactSection />
       </main>
       <Footer />

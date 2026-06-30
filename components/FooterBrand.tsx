@@ -11,20 +11,18 @@ export function FooterBrand() {
         aria-label="Half A Bil Agency — home"
       >
         <LogoMark
-          className="h-14 w-14 sm:h-16 sm:w-16"
+          className="h-14 w-14 sm:h-[72px] sm:w-[72px]"
           decorative
           titleId="footer-logo-title"
           descId="footer-logo-desc"
         />
-        <p className="mt-4 text-base font-bold tracking-tight text-white sm:text-lg">
+        <p className="mt-5 text-lg font-bold tracking-tight text-white">
           {siteConfig.name}
         </p>
-        <p className="mt-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-brand-orange sm:text-[13px]">
+        <p className="mt-2 text-[13px] font-semibold uppercase tracking-[0.12em] text-brand-orange">
           {siteConfig.brandLine}
         </p>
-        <p className="mt-1.5 text-[11px] text-zinc-500 sm:text-xs">
-          {siteConfig.tagline}
-        </p>
+        <p className="mt-2 text-xs text-zinc-500">{siteConfig.tagline}</p>
       </Link>
     </div>
   );

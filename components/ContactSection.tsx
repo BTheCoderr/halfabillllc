@@ -60,7 +60,7 @@ export function ContactSection() {
       <div className="pointer-events-none absolute inset-0 grid-bg opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/50 via-transparent to-transparent" />
 
-      <div className="relative mx-auto max-w-[860px] px-5 lg:px-8">
+      <div className="relative mx-auto max-w-[980px] px-5 lg:px-8">
         <SectionHeading
           title="Start Your Project"
           subtitle="Tell us what you need built. We will review your details and get back to you shortly."
@@ -74,7 +74,7 @@ export function ContactSection() {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
-            className="glass-card space-y-6 rounded-2xl p-8 sm:space-y-7 sm:p-10 lg:p-12"
+            className="glass-card space-y-6 rounded-2xl p-8 sm:space-y-7 sm:p-10 lg:p-14"
           >
             <input type="hidden" name="form-name" value="project-request" />
 
