@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { JsonLd } from "@/components/JsonLd";
 import { NetlifyFormBootstrap } from "@/components/NetlifyFormBootstrap";
+import { siteConfig } from "@/lib/site-data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,31 +15,41 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteTitle =
+  "Half A Bil Agency | Websites, Apps, MVPs, and Business Automations";
+const siteDescription =
+  "Half A Bil Agency builds websites, apps, MVPs, landing pages, and business automations for companies that need practical digital systems fast.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://halfabilagency.com"
   ),
-  title: "Half A Bil Agency | Websites, Apps, MVPs, and Business Automations",
-  description:
-    "Half A Bil Agency builds websites, apps, MVPs, landing pages, and business automations for companies that need practical digital systems fast.",
+  title: siteTitle,
+  description: siteDescription,
+  keywords: [
+    "website design",
+    "MVP development",
+    "business automation",
+    "AI workflows",
+    "landing pages",
+    siteConfig.name,
+  ],
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Half A Bil Agency | Websites, Apps, MVPs, and Business Automations",
-    description:
-      "Half A Bil Agency builds websites, apps, MVPs, landing pages, and business automations for companies that need practical digital systems fast.",
+    title: siteTitle,
+    description: siteDescription,
     type: "website",
-    images: ["/half-a-bil-mark.svg"],
+    siteName: siteConfig.name,
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Half A Bil Agency | Websites, Apps, MVPs, and Business Automations",
-    description:
-      "Half A Bil Agency builds websites, apps, MVPs, landing pages, and business automations for companies that need practical digital systems fast.",
-    images: ["/half-a-bil-mark.svg"],
+    title: siteTitle,
+    description: siteDescription,
   },
 };
 
@@ -52,6 +64,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full bg-black text-white">
+        <JsonLd />
         <NetlifyFormBootstrap />
         {children}
       </body>

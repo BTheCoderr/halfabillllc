@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import {
   Bot,
   CheckCircle2,
@@ -55,11 +58,39 @@ const buildItems = [
 ];
 
 export function HeroDashboard() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [animated, setAnimated] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimated(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="relative w-full max-w-xl lg:max-w-none lg:justify-self-end">
+    <div
+      ref={ref}
+      className="relative w-full max-w-xl lg:max-w-none lg:justify-self-end"
+    >
       <div className="absolute -inset-4 rounded-3xl bg-brand-orange/10 blur-3xl animate-pulse-glow" />
 
-      <div className="gradient-border relative overflow-hidden rounded-2xl glass-card shadow-2xl shadow-black/60">
+      <div
+        className={`gradient-border relative overflow-hidden rounded-2xl glass-card shadow-2xl shadow-black/60 transition-all duration-700 ${
+          animated ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+        }`}
+      >
         <div className="border-b border-white/10 bg-white/[0.03] px-5 py-3.5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -77,12 +108,17 @@ export function HeroDashboard() {
         </div>
 
         <div className="grid gap-3 p-4 sm:grid-cols-2 sm:p-5">
-          {buildItems.map((item) => {
+          {buildItems.map((item, index) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.label}
-                className="rounded-xl border border-white/8 bg-black/40 p-4 transition-colors hover:border-brand-orange/25"
+                className="rounded-xl border border-white/8 bg-black/40 p-4 transition-all duration-500 hover:border-brand-orange/25"
+                style={{
+                  transitionDelay: animated ? `${index * 80}ms` : "0ms",
+                  opacity: animated ? 1 : 0,
+                  transform: animated ? "translateY(0)" : "translateY(8px)",
+                }}
               >
                 <div className="mb-3 flex items-start justify-between">
                   <div className="flex items-center gap-2.5">
@@ -102,8 +138,11 @@ export function HeroDashboard() {
                 </div>
                 <div className="h-1.5 overflow-hidden rounded-full bg-white/10">
                   <div
-                    className="h-full rounded-full bg-gradient-to-r from-brand-orange to-brand-orange-light transition-all duration-700"
-                    style={{ width: `${item.progress}%` }}
+                    className="h-full rounded-full bg-gradient-to-r from-brand-orange to-brand-orange-light transition-all duration-1000 ease-out"
+                    style={{
+                      width: animated ? `${item.progress}%` : "0%",
+                      transitionDelay: animated ? `${200 + index * 100}ms` : "0ms",
+                    }}
                   />
                 </div>
               </div>

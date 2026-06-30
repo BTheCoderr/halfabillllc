@@ -1,9 +1,14 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { budgetOptions, siteConfig, timelineOptions } from "@/lib/site-data";
 import { serviceOptions } from "@/lib/brand";
+import {
+  BUDGET_PREFILL_KEY,
+  MESSAGE_PREFILL_KEY,
+  SERVICE_PREFILL_KEY,
+} from "@/lib/intake";
 
 /** Netlify Forms on Next.js must POST to a static HTML path, not `/`. */
 const NETLIFY_FORM_ACTION = "/netlify-form.html";
@@ -28,9 +33,55 @@ function buildEncodedBody(form: HTMLFormElement): string {
   return params.toString();
 }
 
+function applyPrefill(
+  setService: (value: string) => void,
+  setBudget: (value: string) => void,
+  setMessage: (value: string) => void
+) {
+  const params = new URLSearchParams(window.location.search);
+  const serviceFromUrl = params.get("service");
+  const serviceFromStorage = sessionStorage.getItem(SERVICE_PREFILL_KEY);
+  const serviceValue = serviceFromUrl ?? serviceFromStorage;
+
+  if (
+    serviceValue &&
+    (serviceOptions as readonly string[]).includes(serviceValue)
+  ) {
+    setService(serviceValue);
+    sessionStorage.removeItem(SERVICE_PREFILL_KEY);
+  }
+
+  const budgetValue = sessionStorage.getItem(BUDGET_PREFILL_KEY);
+  if (budgetValue && budgetOptions.includes(budgetValue)) {
+    setBudget(budgetValue);
+    sessionStorage.removeItem(BUDGET_PREFILL_KEY);
+  }
+
+  const messageValue = sessionStorage.getItem(MESSAGE_PREFILL_KEY);
+  if (messageValue) {
+    setMessage(messageValue);
+    sessionStorage.removeItem(MESSAGE_PREFILL_KEY);
+  }
+}
+
 export function ContactSection() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [service, setService] = useState("");
+  const [budget, setBudget] = useState("");
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    applyPrefill(setService, setBudget, setMessage);
+
+    function handlePrefillEvent() {
+      applyPrefill(setService, setBudget, setMessage);
+    }
+
+    window.addEventListener("hab-intake-prefill", handlePrefillEvent);
+    return () =>
+      window.removeEventListener("hab-intake-prefill", handlePrefillEvent);
+  }, []);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -161,7 +212,14 @@ export function ContactSection() {
                 What do you need help with?{" "}
                 <span className="text-brand-orange">*</span>
               </label>
-              <select id="service" name="service" required className={inputClass}>
+              <select
+                id="service"
+                name="service"
+                required
+                value={service}
+                onChange={(event) => setService(event.target.value)}
+                className={inputClass}
+              >
                 <option value="">Select one</option>
                 {serviceOptions.map((option) => (
                   <option key={option} value={option}>
@@ -176,7 +234,14 @@ export function ContactSection() {
                 <label htmlFor="budget" className={labelClass}>
                   Budget Range <span className="text-brand-orange">*</span>
                 </label>
-                <select id="budget" name="budget" required className={inputClass}>
+                <select
+                  id="budget"
+                  name="budget"
+                  required
+                  value={budget}
+                  onChange={(event) => setBudget(event.target.value)}
+                  className={inputClass}
+                >
                   <option value="">Select one</option>
                   {budgetOptions.map((option) => (
                     <option key={option} value={option}>
@@ -209,6 +274,8 @@ export function ContactSection() {
                 name="message"
                 rows={7}
                 required
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
                 className={`${inputClass} min-h-[180px] resize-y`}
                 placeholder="Tell us what you need built, fixed, automated, or launched."
               />
