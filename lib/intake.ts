@@ -105,8 +105,14 @@ export type RecentBuild = {
   imageSrc?: string;
   imageAlt: string;
   placeholder?: boolean;
+  liveUrl?: string;
+  githubUrl?: string;
+  language?: string;
 };
 
+export const githubProfileUrl = "https://github.com/BTheCoderr";
+
+/** Real builds from github.com/BTheCoderr — live demos and repos, no invented metrics. */
 export const recentBuilds: RecentBuild[] = [
   {
     title: "Half A Bil Agency",
@@ -115,23 +121,64 @@ export const recentBuilds: RecentBuild[] = [
       "Agency site with project intake, Calendly discovery calls, and deposit checkout flow.",
     imageSrc: "/work/half-a-bil-agency.png",
     imageAlt: "Half A Bil Agency website homepage preview",
-    placeholder: false,
+    liveUrl: "https://halfabilagency.netlify.app",
+    githubUrl: "https://github.com/BTheCoderr/halfabillllc",
+    language: "TypeScript",
   },
   {
-    title: "Your build here",
-    category: "Screenshot slot",
+    title: "SmartProBono",
+    category: "AI Platform · Legal Tech",
     description:
-      "Add a PNG to public/work/ and set imageSrc in lib/intake.ts when you have a live project to showcase.",
-    imageAlt: "Client project screenshot placeholder",
-    placeholder: true,
+      "Free legal services platform with AI guidance, document generation, and resources for people who need help.",
+    imageSrc: "/work/smartprobono.png",
+    imageAlt: "SmartProBono legal services platform preview",
+    liveUrl: "https://www.smartprobono.org",
+    githubUrl: "https://github.com/BTheCoderr/SmartProBonoAPP",
+    language: "Python",
   },
   {
-    title: "Your build here",
-    category: "Screenshot slot",
+    title: "Escape Ramp",
+    category: "SaaS · Migration Tool",
     description:
-      "Real screenshots only — no fake metrics. Swap this card when the next project ships.",
-    imageAlt: "Client project screenshot placeholder",
-    placeholder: true,
+      "QuickBooks Desktop migration product with AI-guided setup, transparent pricing, and analytics.",
+    imageSrc: "/work/escape-ramp.png",
+    imageAlt: "Escape Ramp QuickBooks migration SaaS preview",
+    liveUrl: "https://escape-ramp.vercel.app",
+    githubUrl: "https://github.com/BTheCoderr/EscapeRamp",
+    language: "TypeScript",
+  },
+  {
+    title: "APC LLC",
+    category: "Business Website · Lead Gen",
+    description:
+      "Cargo-van delivery and hauling site with service pages, motion design, and contact flows.",
+    imageSrc: "/work/apcllc.png",
+    imageAlt: "APC LLC delivery services website preview",
+    liveUrl: "https://apcllc.co",
+    githubUrl: "https://github.com/BTheCoderr/APCLLC",
+    language: "TypeScript",
+  },
+  {
+    title: "DeenNotes AI",
+    category: "AI App · Journal",
+    description:
+      "Islamic reflection journal for khutbah notes, lectures, duas, and weekly action steps.",
+    imageSrc: "/work/deennotesai.png",
+    imageAlt: "DeenNotes AI reflection journal preview",
+    liveUrl: "https://deennotesai.netlify.app",
+    githubUrl: "https://github.com/BTheCoderr/DeenNotesAI",
+    language: "TypeScript",
+  },
+  {
+    title: "Jackerbox",
+    category: "Marketplace · Payments",
+    description:
+      "Peer-to-peer equipment rental with Stripe Identity verification, admin tools, and rental workflows.",
+    imageSrc: "/work/jackerbox.png",
+    imageAlt: "Jackerbox equipment rental marketplace preview",
+    liveUrl: "https://jackerbox.app",
+    githubUrl: "https://github.com/BTheCoderr/jackerboxV2",
+    language: "TypeScript",
   },
 ];
 
