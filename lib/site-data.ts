@@ -31,8 +31,8 @@ export const siteConfig = {
 
 export const navLinks = [
   { label: "Services", href: "#services" },
+  { label: "Proof", href: "#proof" },
   { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
   { label: "Systems", href: "#systems" },
   { label: "Pricing", href: "#pricing" },
   { label: "Start a Project", href: "#contact" },
@@ -48,8 +48,9 @@ export function getBookingHref(): string {
 
 export const footerLinks = [
   { label: "Services", href: "#services" },
+  { label: "Proof", href: "#proof" },
   { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
+  { label: "Systems", href: "#systems" },
   { label: "Pricing", href: "#pricing" },
   { label: "Start a Project", href: "#contact" },
 ];

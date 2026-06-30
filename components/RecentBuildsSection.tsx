@@ -87,7 +87,7 @@ export function RecentBuildsSection() {
           <SectionHeading
             eyebrow="Recent Work"
             title="Recent builds"
-            subtitle="Real projects from our GitHub — live demos and repos. No fake client logos or made-up metrics."
+            subtitle="Founder-built projects from GitHub — live demos and repos. No fake client logos or made-up metrics."
           />
         </FadeInSection>
 

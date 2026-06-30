@@ -1,14 +1,16 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { ProblemSection } from "@/components/ProblemSection";
+import { ProofOfWorkSection } from "@/components/ProofOfWorkSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { ServicesConfigurator } from "@/components/ServicesConfigurator";
-import { ToolsStrip } from "@/components/ToolsStrip";
-import { SystemsSection } from "@/components/SystemsSection";
+import { WhatWeBuildSection } from "@/components/WhatWeBuildSection";
+import { RecentBuildsSection } from "@/components/RecentBuildsSection";
+import { LiveSystemStackSection } from "@/components/LiveSystemStackSection";
+import { TechCapabilitiesSection } from "@/components/TechCapabilitiesSection";
+import { WhyAgencySection } from "@/components/WhyAgencySection";
 import { OfferSection } from "@/components/OfferSection";
 import { ProcessSection } from "@/components/ProcessSection";
-import { RecentBuildsSection } from "@/components/RecentBuildsSection";
-import { UseCasesSection } from "@/components/UseCasesSection";
 import { FounderSection } from "@/components/FounderSection";
 import { CTASection } from "@/components/CTASection";
 import { PaymentSection } from "@/components/PaymentSection";
@@ -22,14 +24,16 @@ export default function Home() {
       <main>
         <Hero />
         <ProblemSection />
+        <ProofOfWorkSection />
         <ServicesSection />
         <ServicesConfigurator />
-        <ToolsStrip />
-        <SystemsSection />
+        <WhatWeBuildSection />
+        <RecentBuildsSection />
+        <LiveSystemStackSection />
+        <TechCapabilitiesSection />
+        <WhyAgencySection />
         <OfferSection />
         <ProcessSection />
-        <RecentBuildsSection />
-        <UseCasesSection />
         <FounderSection />
         <CTASection />
         <PaymentSection />

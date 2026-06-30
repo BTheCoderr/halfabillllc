@@ -17,7 +17,7 @@ export function ProblemSection() {
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           title="Your Business Should Not Be Held Back by Bad Digital Systems"
-          subtitle="Most businesses do not need more random tools. They need the right website, app, form, CRM, booking flow, or automation built around how they actually work."
+          subtitle="You need the right website, app, form, CRM, booking flow, or automation — built around how you actually work."
           align="left"
         />
 

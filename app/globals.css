@@ -134,13 +134,28 @@ textarea {
   animation: float 6s ease-in-out infinite;
 }
 
+@keyframes flow-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.flow-line {
+  animation: flow-pulse 2.5s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
   .animate-pulse-glow,
-  .animate-float {
+  .animate-float,
+  .flow-line {
     animation: none;
   }
 }

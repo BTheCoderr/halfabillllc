@@ -28,8 +28,8 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
-            {siteConfig.name} helps businesses launch better websites, build
-            useful apps, and automate the busywork that slows growth.
+            Websites, apps, MVPs, and automations — built fast, priced clearly,
+            wired into systems that capture leads and close work.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
