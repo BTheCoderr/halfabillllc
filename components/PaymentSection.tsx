@@ -2,23 +2,25 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { getBookingHref, siteConfig } from "@/lib/site-data";
+import { getBookingHref, isLivePaymentUrl, siteConfig } from "@/lib/site-data";
 
 const depositCards = [
   {
     title: "Starter Website Deposit",
     amount: "$250 deposit",
     description: "Secure your spot for a one-page starter website build.",
-    href: siteConfig.starterPaymentUrl,
+    paymentHref: siteConfig.starterPaymentUrl,
     buttonLabel: "Pay Starter Deposit",
+    fallbackLabel: "Request Starter Deposit",
   },
   {
     title: "Business System Deposit",
     amount: "$500 deposit",
     description:
       "For website plus booking, forms, payments, or automation work.",
-    href: siteConfig.systemPaymentUrl,
+    paymentHref: siteConfig.systemPaymentUrl,
     buttonLabel: "Pay System Deposit",
+    fallbackLabel: "Request System Deposit",
     highlighted: true,
   },
   {
@@ -26,10 +28,15 @@ const depositCards = [
     amount: "Custom payment link after consultation",
     description:
       "For custom apps, portals, dashboards, or advanced automation.",
-    href: siteConfig.customQuoteUrl,
+    paymentHref: siteConfig.customQuoteUrl,
     buttonLabel: "Request Custom Quote",
+    fallbackLabel: "Request Custom Quote",
   },
 ];
+
+const stripeLinksReady =
+  isLivePaymentUrl(siteConfig.starterPaymentUrl) &&
+  isLivePaymentUrl(siteConfig.systemPaymentUrl);
 
 export function PaymentSection() {
   return (
@@ -38,37 +45,47 @@ export function PaymentSection() {
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           title="Ready to Start After the Call?"
-          subtitle="Once the scope is clear, we'll send a secure payment link for the deposit or package that matches your project."
+          subtitle={
+            stripeLinksReady
+              ? "Once the scope is clear, pay your deposit securely through Stripe."
+              : "Once the scope is clear, we will send a secure Stripe payment link for the deposit that matches your project."
+          }
           eyebrow="Deposits"
         />
 
         <div className="grid gap-6 lg:grid-cols-3">
-          {depositCards.map((card) => (
-            <GlassCard
-              key={card.title}
-              hover={false}
-              className={`flex flex-col ${
-                card.highlighted
-                  ? "gradient-border ring-1 ring-brand-orange/25 shadow-lg shadow-brand-orange/10"
-                  : ""
-              }`}
-            >
-              <h3 className="text-lg font-bold text-white">{card.title}</h3>
-              <p className="mt-2 text-2xl font-bold text-brand-orange">
-                {card.amount}
-              </p>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">
-                {card.description}
-              </p>
-              <Button
-                href={card.href}
-                variant={card.highlighted ? "primary" : "secondary"}
-                className="mt-8 w-full py-4 text-base"
+          {depositCards.map((card) => {
+            const hasStripeLink = isLivePaymentUrl(card.paymentHref);
+            const href = hasStripeLink ? card.paymentHref : "#contact";
+            const label = hasStripeLink ? card.buttonLabel : card.fallbackLabel;
+
+            return (
+              <GlassCard
+                key={card.title}
+                hover={false}
+                className={`flex flex-col ${
+                  card.highlighted
+                    ? "gradient-border ring-1 ring-brand-orange/25 shadow-lg shadow-brand-orange/10"
+                    : ""
+                }`}
               >
-                {card.buttonLabel}
-              </Button>
-            </GlassCard>
-          ))}
+                <h3 className="text-lg font-bold text-white">{card.title}</h3>
+                <p className="mt-2 text-2xl font-bold text-brand-orange">
+                  {card.amount}
+                </p>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">
+                  {card.description}
+                </p>
+                <Button
+                  href={href}
+                  variant={card.highlighted ? "primary" : "secondary"}
+                  className="mt-8 w-full py-4 text-base"
+                >
+                  {label}
+                </Button>
+              </GlassCard>
+            );
+          })}
         </div>
 
         <p className="mt-10 text-center text-sm text-zinc-500">

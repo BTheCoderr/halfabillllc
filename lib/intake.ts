@@ -113,8 +113,9 @@ export const recentBuilds: RecentBuild[] = [
     category: "Website · Forms · Booking",
     description:
       "Agency site with project intake, Calendly discovery calls, and deposit checkout flow.",
-    imageAlt: "Half A Bil Agency website preview",
-    placeholder: true,
+    imageSrc: "/work/half-a-bil-agency.png",
+    imageAlt: "Half A Bil Agency website homepage preview",
+    placeholder: false,
   },
   {
     title: "Your build here",

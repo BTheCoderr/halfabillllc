@@ -63,8 +63,19 @@ The live site at **Half A Bil Agency** should only expose:
 ### 5. Payments — Stripe Payment Links
 
 - Stripe account → **Payment Links**
-- Create link for standard deposit amount (e.g. Starter Website deposit)
-- Send link **only after** proposal is accepted — email or text from operator
+- Create two links:
+  - **Starter Website Deposit** — $250
+  - **Business System Deposit** — $500
+- Copy each link into Netlify env vars (redeploy required):
+
+| Netlify variable | Value |
+|---|---|
+| `NEXT_PUBLIC_STRIPE_STARTER_PAYMENT_URL` | `https://buy.stripe.com/...` |
+| `NEXT_PUBLIC_STRIPE_SYSTEM_PAYMENT_URL` | `https://buy.stripe.com/...` |
+
+- Local dev: copy `.env.example` → `.env.local` and paste the same URLs
+- Until env vars are set, deposit buttons on the public site route to **#contact** with “Request deposit” labels
+- Send custom deposit links **only after** proposal is accepted when scope is non-standard
 - Mark deal **Payment Link Sent** → **Deposit Paid** in HubSpot
 
 ### 6. Automation — Manual first, Make/Zapier later

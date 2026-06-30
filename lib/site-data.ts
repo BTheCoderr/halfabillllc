@@ -1,3 +1,13 @@
+function readPublicPaymentUrl(envKey: string): string {
+  const value = process.env[envKey]?.trim();
+  if (!value || !value.startsWith("https://")) return "#";
+  return value;
+}
+
+export function isLivePaymentUrl(url: string): boolean {
+  return url.startsWith("https://");
+}
+
 export const siteConfig = {
   name: "Half A Bil Agency",
   brandLine: "Full Service Half A Bil",
@@ -7,9 +17,10 @@ export const siteConfig = {
   phoneTel: "4012179799",
   /** Calendly booking page for discovery calls. */
   bookingUrl: "https://calendly.com/bferrell514",
-  /** Replace starterPaymentUrl and systemPaymentUrl with real Stripe Payment Links. */
-  starterPaymentUrl: "#",
-  systemPaymentUrl: "#",
+  /** Set NEXT_PUBLIC_STRIPE_STARTER_PAYMENT_URL in Netlify env (Stripe Payment Link). */
+  starterPaymentUrl: readPublicPaymentUrl("NEXT_PUBLIC_STRIPE_STARTER_PAYMENT_URL"),
+  /** Set NEXT_PUBLIC_STRIPE_SYSTEM_PAYMENT_URL in Netlify env (Stripe Payment Link). */
+  systemPaymentUrl: readPublicPaymentUrl("NEXT_PUBLIC_STRIPE_SYSTEM_PAYMENT_URL"),
   customQuoteUrl: "#contact",
   social: {
     instagram: "#",
