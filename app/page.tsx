@@ -2,9 +2,10 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { ProblemSection } from "@/components/ProblemSection";
 import { ServicesSection } from "@/components/ServicesSection";
+import { SystemsSection } from "@/components/SystemsSection";
 import { OfferSection } from "@/components/OfferSection";
 import { ProcessSection } from "@/components/ProcessSection";
-import { WorkSection } from "@/components/WorkSection";
+import { UseCasesSection } from "@/components/UseCasesSection";
 import { FounderSection } from "@/components/FounderSection";
 import { CTASection } from "@/components/CTASection";
 import { ContactSection } from "@/components/ContactSection";
@@ -18,9 +19,10 @@ export default function Home() {
         <Hero />
         <ProblemSection />
         <ServicesSection />
+        <SystemsSection />
         <OfferSection />
         <ProcessSection />
-        <WorkSection />
+        <UseCasesSection />
         <FounderSection />
         <CTASection />
         <ContactSection />

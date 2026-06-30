@@ -1,8 +1,9 @@
 export const siteConfig = {
-  name: "Half a bil agency",
+  name: "Half A Bil Agency",
+  brandLine: "Full Service Half A Bil",
   tagline: "Websites. Apps. Automations.",
   email: "hello@halfabilagency.com",
-  phone: "(555) 000-0000",
+  phone: "Add phone number here",
   social: {
     instagram: "#",
     linkedin: "#",
@@ -13,35 +14,42 @@ export const siteConfig = {
 export const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
-  { label: "Work We Do", href: "#work" },
+  { label: "Systems", href: "#systems" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Contact", href: "#contact" },
+];
+
+export const footerLinks = [
+  { label: "Services", href: "#services" },
+  { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const problemCards = [
   {
-    title: "Outdated website",
+    title: "Outdated Website",
     description:
-      "Your site looks old, loads slow, or does not explain what you do clearly enough to convert visitors.",
+      "Your site looks old, loads slow, or fails to explain what you do clearly enough to convert visitors into leads.",
     icon: "Globe",
   },
   {
-    title: "No lead system",
+    title: "No Lead System",
     description:
-      "Inquiries get lost in DMs, voicemails, and random notes instead of one clean intake flow.",
+      "Inquiries get lost in DMs, voicemails, and scattered notes instead of one clean intake and follow-up flow.",
     icon: "UserX",
   },
   {
-    title: "Too much manual work",
+    title: "Manual Follow-Up",
     description:
-      "You are copying data, sending the same emails, and chasing follow-ups by hand every week.",
+      "You are copying data, sending the same emails, and chasing customers by hand every single week.",
     icon: "Clock",
   },
   {
-    title: "No clear digital process",
+    title: "Disconnected Tools",
     description:
-      "Booking, payments, CRM, and customer follow-up are scattered across tools that do not talk.",
-    icon: "Shuffle",
+      "Booking, payments, CRM, and customer follow-up live in separate tools that do not talk to each other.",
+    icon: "Unplug",
   },
 ];
 
@@ -49,52 +57,62 @@ export const services = [
   {
     title: "Website Design",
     description:
-      "Clean, modern websites for businesses that need to look credible and convert visitors into leads.",
+      "Modern websites that help businesses look credible, explain what they do, and convert visitors into leads.",
     icon: "Layout",
   },
   {
-    title: "Apps and Portals",
+    title: "Apps and MVPs",
     description:
-      "Custom web and mobile apps for internal tools, customer portals, MVPs, booking platforms, dashboards, and service workflows.",
+      "Web and mobile apps for startup ideas, customer portals, internal tools, booking platforms, and dashboards.",
     icon: "Smartphone",
   },
   {
     title: "Business Automations",
     description:
-      "Automated forms, email follow-ups, CRM updates, reminders, spreadsheets, lead routing, and task systems.",
+      "Systems that handle forms, reminders, lead routing, emails, task updates, spreadsheets, and follow-ups automatically.",
     icon: "Workflow",
   },
   {
     title: "AI Workflow Setup",
     description:
-      "Practical AI systems for customer support, content, intake, admin work, research, summaries, and operations.",
+      "Practical AI systems for intake, support, admin work, content, research, summaries, and business operations.",
     icon: "Sparkles",
   },
   {
     title: "Landing Pages",
     description:
-      "High-converting pages for campaigns, events, offers, ads, music, products, services, and launches.",
+      "Focused pages for ads, events, services, products, music, launches, and local business campaigns.",
     icon: "Rocket",
   },
   {
     title: "Digital Cleanup",
     description:
-      "Fix messy tech stacks, broken websites, scattered tools, bad forms, and confusing customer flows.",
+      "We fix messy tech stacks, broken forms, confusing workflows, bad websites, and disconnected tools.",
     icon: "Wrench",
   },
+];
+
+export const systemSteps = [
+  { label: "Capture the lead", icon: "Inbox" },
+  { label: "Qualify the request", icon: "Filter" },
+  { label: "Book the call", icon: "Calendar" },
+  { label: "Send the follow-up", icon: "Send" },
+  { label: "Track the customer", icon: "Users" },
+  { label: "Automate the next step", icon: "Zap" },
 ];
 
 export const packages = [
   {
     name: "Starter Website",
-    tagline: "For businesses that need a clean online presence fast.",
+    tagline: "For businesses that need a credible online presence fast.",
     price: "Starting at $500",
     features: [
       "One-page website",
       "Mobile-friendly design",
       "Contact form",
+      "Clear calls to action",
       "Basic SEO setup",
-      "Call-to-action sections",
+      "Launch support",
     ],
     highlighted: false,
   },
@@ -105,17 +123,18 @@ export const packages = [
     price: "Starting at $1,500",
     features: [
       "Multi-section website or landing page",
-      "Project intake form",
+      "Intake form",
       "Booking or payment setup",
-      "Basic CRM or spreadsheet workflow",
+      "CRM or spreadsheet workflow",
       "Automated email follow-up",
+      "Launch support",
     ],
     highlighted: true,
   },
   {
     name: "Custom App or Automation",
     tagline:
-      "For businesses that need a custom portal, app, dashboard, internal tool, or advanced automation.",
+      "For businesses that need a custom app, portal, dashboard, internal tool, or advanced automation.",
     price: "Quote after consultation",
     features: [
       "Discovery call",
@@ -130,54 +149,54 @@ export const packages = [
 
 export const processSteps = [
   {
-    step: "1",
-    title: "Quick Call",
+    step: "01",
+    title: "Discover",
     description:
-      "We learn what you need and what is slowing your business down.",
+      "We learn what you need, what is broken, and what the business goal is.",
   },
   {
-    step: "2",
-    title: "Build Plan",
+    step: "02",
+    title: "Map",
     description:
-      "We map the website, app, or automation that makes the most sense.",
+      "We map the website, app, automation, or workflow before building.",
   },
   {
-    step: "3",
-    title: "Fast Build",
-    description: "We design, build, test, and keep you updated.",
+    step: "03",
+    title: "Build",
+    description: "We design, build, test, and keep the project moving.",
   },
   {
-    step: "4",
-    title: "Launch and Improve",
+    step: "04",
+    title: "Launch",
     description:
-      "We help you go live and make the system better based on real use.",
+      "We help you go live and make sure the system works in the real world.",
   },
 ];
 
-export const workExamples = [
+export const useCases = [
   "Restaurant website with online ordering links",
-  "Salon booking page with automated reminders",
   "Contractor lead form with instant follow-up",
-  "Nonprofit intake form and volunteer portal",
-  "Creator landing page for music or events",
-  "Small business dashboard for leads and customers",
-  "AI assistant for FAQs and intake",
-  "Custom MVP app for a startup idea",
+  "Salon booking page with reminders",
+  "Nonprofit intake and volunteer system",
+  "Creator or artist landing page",
+  "Startup MVP app",
+  "AI customer intake assistant",
+  "Internal dashboard for leads and jobs",
+  "Payment and booking flow",
+  "Automated email and text follow-up system",
 ];
 
 export const budgetOptions = [
-  "Under $1,000",
-  "$1,000 – $2,500",
-  "$2,500 – $5,000",
-  "$5,000 – $10,000",
-  "$10,000+",
+  "Under $500",
+  "$500 to $1,500",
+  "$1,500 to $5,000",
+  "$5,000+",
   "Not sure yet",
 ];
 
 export const timelineOptions = [
   "ASAP",
-  "2–4 weeks",
-  "1–2 months",
-  "Flexible",
-  "Not sure yet",
+  "This month",
+  "Next 30 to 60 days",
+  "Still planning",
 ];
