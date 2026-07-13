@@ -15,13 +15,3 @@ export const logoCopy = {
   tagline: "Full Service Half A Bil.",
   desc: "Logo for HalfABilAgency, a website, app, AI, and automation agency.",
 } as const;
-
-export const serviceOptions = [
-  "Website Design",
-  "App or MVP",
-  "Business Automation",
-  "AI Workflow Setup",
-  "Landing Page",
-  "Digital Cleanup",
-  "Not Sure Yet",
-] as const;

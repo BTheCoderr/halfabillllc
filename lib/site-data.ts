@@ -211,18 +211,3 @@ export const useCases = [
   "Payment and booking flow",
   "Automated email and text follow-up system",
 ];
-
-export const budgetOptions = [
-  "Under $500",
-  "$500 to $1,500",
-  "$1,500 to $5,000",
-  "$5,000+",
-  "Not sure yet",
-];
-
-export const timelineOptions = [
-  "ASAP",
-  "This month",
-  "Next 30 to 60 days",
-  "Still planning",
-];

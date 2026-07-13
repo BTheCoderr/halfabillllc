@@ -7,7 +7,7 @@
 
 ## Purpose
 
-HubSpot Free CRM is the internal system of record for deals, follow-ups, and pipeline status after a lead shows interest. Visitors use the **project request form** and **GoHighLevel booking** on the public site — they never see HubSpot.
+HubSpot Free CRM is the internal system of record for deals, follow-ups, and pipeline status after a lead shows interest. Visitors use the **GoHighLevel project request form** and **GoHighLevel booking** on the public site — they never see HubSpot.
 
 ---
 
@@ -17,8 +17,7 @@ HubSpot Free CRM is the internal system of record for deals, follow-ups, and pip
 |---|---|---|
 | **HubSpot Free CRM** | Deals, contacts, pipeline | Free |
 | **Google Sheets** | Raw cold call list | Free |
-| **Netlify Forms** | Website project requests | Free (with site) |
-| **GoHighLevel** | Discovery call booking | Paid |
+| **GoHighLevel** | Website project requests + discovery call booking | Paid |
 | **Stripe Payment Links** | Deposits after proposal | Pay per transaction |
 | **Make.com** | Automation (later) | Free plan when ready |
 
@@ -66,7 +65,7 @@ Work begins → Build In Progress
 Project complete → Won
 ```
 
-**Website form submissions:** When Netlify Forms delivers a `project-request`, create or update a HubSpot contact/deal manually (or automate later with Make.com).
+**Website form submissions:** When GoHighLevel receives a "Website Project Request" submission, create or update a HubSpot contact/deal manually (or automate later with Make.com).
 
 ---
 
@@ -77,7 +76,7 @@ Project complete → Won
 - [ ] Create contact properties: Business Name, Industry, City, Source, Website, Google Rating
 - [ ] Create deal properties: Service Pitch, Pain Point, Call Status, Call Outcome, Next Follow-Up Date
 - [ ] Add checkboxes or notes: Booking Link Sent, Stripe Link Sent
-- [ ] Set email notifications for new form submissions (via Netlify, not HubSpot form)
+- [ ] Set email notifications for new form submissions (via GoHighLevel, not HubSpot form)
 - [ ] Bookmark HubSpot dashboard — do not expose URL on public site
 
 ---
@@ -86,7 +85,7 @@ Project complete → Won
 
 | Customer (public site) | Operator (internal) |
 |---|---|
-| Project request form | Netlify Forms inbox + HubSpot deal |
+| Project request form | GoHighLevel inbox + HubSpot deal |
 | Book a Free Call (GoHighLevel) | Pipeline → Discovery Booked |
 | Pay deposit (Stripe link sent privately) | Pipeline → Deposit Paid |
 | Services, pricing, process | Google Sheets call list |

@@ -12,7 +12,7 @@ The live site at **HalfABilAgency** should only expose:
 - Process
 - Systems
 - Pricing
-- **Start a Project** (Netlify form → `project-request`)
+- **Start a Project** (GoHighLevel embedded form)
 - **Book a Free Call** (GoHighLevel booking widget — configure link below)
 - Payment/deposit **only** via a polished Stripe link sent privately after a proposal — not as internal ops UI
 
@@ -31,14 +31,11 @@ The live site at **HalfABilAgency** should only expose:
 
 ## Tool setup
 
-### 1. Website + forms — Netlify + Next.js
+### 1. Website + hosting — Netlify + Next.js
 
 - **Site:** Deployed from GitHub (`halfabillllc`)
-- **Form name:** `project-request` (Netlify Forms)
-- **Detection:** `public/netlify-form.html` + `NetlifyFormBootstrap` in layout
-- **Submit:** URL-encoded POST to **`/netlify-form.html`** (not `/`) → redirect `/thank-you`
-- **Why:** Next.js on Netlify intercepts POST to `/`; static path is required ([Netlify + Next.js forms](https://opennext.js.org/netlify/forms))
-- **Notifications:** Netlify → Project configuration → Notifications → Form submission → **project-request** → your email (see [NETLIFY_FORM_EMAIL.md](./NETLIFY_FORM_EMAIL.md))
+- **Form:** GoHighLevel embedded form ("Website Project Request", id `uGyIDWHvy0skHNNheTW8`) rendered directly in `components/ContactSection.tsx` via `<iframe>` + `form_embed.js`
+- **Submissions:** Land directly in GoHighLevel — configure lead notifications and pipeline routing in GoHighLevel, not Netlify
 
 ### 2. CRM — HubSpot Free
 
@@ -82,12 +79,12 @@ The live site at **HalfABilAgency** should only expose:
 
 | Step | Manual process |
 |---|---|
-| Form submitted | Netlify email → create HubSpot contact/deal |
+| Form submitted | GoHighLevel notify → create HubSpot contact/deal |
 | Call booked | Update HubSpot stage + sheet |
 | Proposal sent | Email PDF/link, update stage |
 | Deposit paid | Stripe notification → update stage |
 
-**Later only after manual flow works:** Make.com free plan or Zapier — Netlify webhook → HubSpot, GoHighLevel → HubSpot, etc. Do not automate before the manual process is reliable.
+**Later only after manual flow works:** Make.com free plan or Zapier — GoHighLevel → HubSpot, etc. Do not automate before the manual process is reliable.
 
 ### 7. Phone
 
@@ -114,7 +111,7 @@ Do not commit secrets. Stripe secret keys stay in Stripe Dashboard only.
 - Internal docs live in `/docs` — **not** served as public routes by Next.js
 - Never commit HubSpot API keys in the repo
 - Never expose call list URLs publicly
-- Form spam: Netlify honeypot `bot-field` enabled
+- Form spam protection is handled by GoHighLevel
 
 ---
 
@@ -122,7 +119,7 @@ Do not commit secrets. Stripe secret keys stay in Stripe Dashboard only.
 
 | Visitor action | Operator action |
 |---|---|
-| Submits project form | Netlify notify → HubSpot lead |
+| Submits project form | GoHighLevel notify → HubSpot lead |
 | Books a call (GoHighLevel) | Stage: Discovery Booked |
 | Receives proposal | Stage: Proposal Sent |
 | Pays Stripe link | Stage: Deposit Paid |

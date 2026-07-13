@@ -44,7 +44,7 @@ export const proofSystems: ProofSystem[] = [
   {
     title: "Lead Capture Funnel",
     description:
-      "Landing page, Netlify form, CRM-ready lead capture, GoHighLevel booking, and Stripe payment link path.",
+      "Landing page, GoHighLevel form, CRM-ready lead capture, booking, and Stripe payment link path.",
     icon: Workflow,
     tag: "Example system",
   },
@@ -64,7 +64,7 @@ export type StackNode = {
 
 export const liveStackNodes: StackNode[] = [
   { label: "Website", icon: Globe },
-  { label: "Netlify Forms", icon: LayoutTemplate },
+  { label: "GoHighLevel Forms", icon: LayoutTemplate },
   { label: "HubSpot CRM", icon: Users },
   { label: "GoHighLevel Booking", icon: Calendar },
   { label: "Stripe Payment Links", icon: CreditCard },

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
-import { NetlifyFormBootstrap } from "@/components/NetlifyFormBootstrap";
 import { siteConfig } from "@/lib/site-data";
 import "./globals.css";
 
@@ -64,7 +63,6 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-black text-white">
         <JsonLd />
-        <NetlifyFormBootstrap />
         {children}
       </body>
     </html>
