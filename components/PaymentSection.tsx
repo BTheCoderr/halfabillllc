@@ -65,12 +65,12 @@ export function PaymentSection() {
                 hover={false}
                 className={`flex flex-col ${
                   card.highlighted
-                    ? "gradient-border ring-1 ring-brand-orange/25 shadow-lg shadow-brand-orange/10"
+                    ? "gradient-border ring-1 ring-brand-gold/25 shadow-lg shadow-brand-gold/10"
                     : ""
                 }`}
               >
                 <h3 className="text-lg font-bold text-white">{card.title}</h3>
-                <p className="mt-2 text-2xl font-bold text-brand-orange">
+                <p className="mt-2 text-2xl font-bold text-brand-gold">
                   {card.amount}
                 </p>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">
@@ -92,14 +92,14 @@ export function PaymentSection() {
           Not ready to pay yet?{" "}
           <Link
             href={getBookingHref()}
-            className="font-medium text-brand-orange hover:text-brand-orange-light hover:underline"
+            className="font-medium text-brand-gold hover:text-brand-gold-light hover:underline"
           >
             Book a free call
           </Link>{" "}
           or{" "}
           <Link
             href="#contact"
-            className="font-medium text-brand-orange hover:text-brand-orange-light hover:underline"
+            className="font-medium text-brand-gold hover:text-brand-gold-light hover:underline"
           >
             submit a project request
           </Link>

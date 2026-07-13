@@ -9,7 +9,7 @@ export function UseCasesSection() {
       <div className="pointer-events-none absolute inset-0 grid-bg opacity-40" />
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
-          title="What Half A Bil Agency Can Build for You"
+          title="What HalfABilAgency Can Build for You"
           eyebrow="Use Cases"
         />
 
@@ -21,7 +21,7 @@ export function UseCasesSection() {
                   {example}
                 </p>
                 <ArrowUpRight
-                  className="h-4 w-4 shrink-0 text-zinc-600 transition-colors group-hover:text-brand-orange"
+                  className="h-4 w-4 shrink-0 text-zinc-600 transition-colors group-hover:text-brand-gold"
                   aria-hidden="true"
                 />
               </div>

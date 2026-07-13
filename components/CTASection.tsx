@@ -9,11 +9,11 @@ export function CTASection() {
       <div className="pointer-events-none absolute inset-0 grid-bg opacity-25" />
       <div className="relative mx-auto max-w-4xl px-5 lg:px-8">
         <div className="gradient-border relative overflow-hidden rounded-3xl glass-card p-10 text-center sm:p-14 lg:p-16">
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-brand-orange/12 via-transparent to-brand-orange/5" />
-          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-brand-orange/10 blur-[80px]" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-brand-gold/12 via-transparent to-brand-gold/5" />
+          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-brand-gold/10 blur-[80px]" />
 
           <div className="relative">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-orange">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold">
               {siteConfig.brandLine}
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[2.65rem] lg:leading-tight">
@@ -33,11 +33,11 @@ export function CTASection() {
               </Button>
             </div>
             <p className="mt-8 flex items-center justify-center gap-2 text-sm text-zinc-500">
-              <Phone className="h-4 w-4 text-brand-orange" aria-hidden="true" />
+              <Phone className="h-4 w-4 text-brand-gold" aria-hidden="true" />
               Prefer to talk first?{" "}
               <Link
                 href={`tel:${siteConfig.phoneTel}`}
-                className="font-medium text-brand-orange transition-colors hover:text-brand-orange-light hover:underline"
+                className="font-medium text-brand-gold transition-colors hover:text-brand-gold-light hover:underline"
               >
                 Call {siteConfig.phone}
               </Link>

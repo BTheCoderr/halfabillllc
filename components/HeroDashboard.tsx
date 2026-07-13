@@ -109,7 +109,7 @@ export function HeroDashboard() {
       ref={ref}
       className="relative w-full max-w-xl lg:max-w-none lg:justify-self-end"
     >
-      <div className="absolute -inset-4 rounded-3xl bg-brand-orange/10 blur-3xl animate-pulse-glow" />
+      <div className="absolute -inset-4 rounded-3xl bg-brand-gold/10 blur-3xl animate-pulse-glow" />
 
       <div
         className={`gradient-border relative overflow-hidden rounded-2xl glass-card shadow-2xl shadow-black/60 transition-all duration-700 ${
@@ -119,7 +119,7 @@ export function HeroDashboard() {
         <div className="border-b border-white/10 bg-white/[0.03] px-4 py-3 sm:px-5 sm:py-3.5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <LayoutDashboard className="h-4 w-4 text-brand-orange" />
+              <LayoutDashboard className="h-4 w-4 text-brand-gold" />
               <span className="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 sm:text-xs">
                 Project Command Center
               </span>
@@ -143,14 +143,14 @@ export function HeroDashboard() {
             return (
               <div
                 key={stat.label}
-                className="rounded-lg border border-white/8 bg-white/[0.02] p-2.5 transition-colors hover:border-brand-orange/25 sm:p-3"
+                className="rounded-lg border border-white/8 bg-white/[0.02] p-2.5 transition-colors hover:border-brand-gold/25 sm:p-3"
                 style={{
                   opacity: animated ? 1 : 0,
                   transitionDelay: animated ? `${index * 60}ms` : "0ms",
                 }}
               >
                 <div className="flex items-center justify-between">
-                  <Icon className="h-3.5 w-3.5 text-brand-orange/80" aria-hidden="true" />
+                  <Icon className="h-3.5 w-3.5 text-brand-gold/80" aria-hidden="true" />
                   <span className="text-[9px] text-zinc-600 sm:text-[10px]">{stat.delta}</span>
                 </div>
                 <p className="mt-1 text-base font-bold text-white sm:text-lg">{stat.value}</p>
@@ -172,8 +172,8 @@ export function HeroDashboard() {
                 onMouseLeave={() => setHovered(null)}
                 className={`rounded-xl border bg-black/40 p-3 transition-all duration-300 sm:p-3.5 ${
                   isHovered
-                    ? "border-brand-orange/40 bg-brand-orange/[0.06] shadow-lg shadow-brand-orange/5"
-                    : "border-white/8 hover:border-brand-orange/25"
+                    ? "border-brand-gold/40 bg-brand-gold/[0.06] shadow-lg shadow-brand-gold/5"
+                    : "border-white/8 hover:border-brand-gold/25"
                 }`}
                 style={{
                   transitionDelay: animated ? `${index * 50}ms` : "0ms",
@@ -185,10 +185,10 @@ export function HeroDashboard() {
                   <div className="flex min-w-0 items-center gap-2">
                     <div
                       className={`shrink-0 rounded-lg p-1.5 transition-colors ${
-                        isHovered ? "bg-brand-orange/20" : "bg-brand-orange/10"
+                        isHovered ? "bg-brand-gold/20" : "bg-brand-gold/10"
                       }`}
                     >
-                      <Icon className="h-3.5 w-3.5 text-brand-orange" />
+                      <Icon className="h-3.5 w-3.5 text-brand-gold" />
                     </div>
                     <div className="min-w-0">
                       <p className="truncate text-xs font-semibold text-white sm:text-sm">
@@ -197,13 +197,13 @@ export function HeroDashboard() {
                       <p className="truncate text-[10px] text-zinc-500">{item.detail}</p>
                     </div>
                   </div>
-                  <span className="shrink-0 rounded-full bg-brand-orange/10 px-1.5 py-0.5 text-[9px] font-medium text-brand-orange sm:text-[10px]">
+                  <span className="shrink-0 rounded-full bg-brand-gold/10 px-1.5 py-0.5 text-[9px] font-medium text-brand-gold sm:text-[10px]">
                     {item.status}
                   </span>
                 </div>
                 <div className="h-1 overflow-hidden rounded-full bg-white/10">
                   <div
-                    className="h-full rounded-full bg-gradient-to-r from-brand-orange to-brand-orange-light transition-all duration-1000 ease-out"
+                    className="h-full rounded-full bg-gradient-to-r from-brand-gold to-brand-gold-light transition-all duration-1000 ease-out"
                     style={{
                       width: animated ? `${item.progress}%` : "0%",
                       transitionDelay: animated ? `${180 + index * 80}ms` : "0ms",

@@ -14,7 +14,7 @@ import {
 const NETLIFY_FORM_ACTION = "/netlify-form.html";
 
 const inputClass =
-  "w-full rounded-xl border border-white/10 bg-black/50 px-4 py-4 text-base text-white placeholder:text-zinc-600 transition-all duration-200 focus:border-brand-orange/50 focus:outline-none focus:ring-2 focus:ring-brand-orange/20";
+  "w-full rounded-xl border border-white/10 bg-black/50 px-4 py-4 text-base text-white placeholder:text-zinc-600 transition-all duration-200 focus:border-brand-gold/50 focus:outline-none focus:ring-2 focus:ring-brand-gold/20";
 
 const labelClass = "mb-2.5 block text-sm font-medium text-zinc-300";
 
@@ -150,7 +150,7 @@ export function ContactSection() {
             <div className="grid gap-6 sm:grid-cols-2">
               <div>
                 <label htmlFor="name" className={labelClass}>
-                  Name <span className="text-brand-orange">*</span>
+                  Name <span className="text-brand-gold">*</span>
                 </label>
                 <input
                   id="name"
@@ -164,7 +164,7 @@ export function ContactSection() {
               </div>
               <div>
                 <label htmlFor="email" className={labelClass}>
-                  Email <span className="text-brand-orange">*</span>
+                  Email <span className="text-brand-gold">*</span>
                 </label>
                 <input
                   id="email"
@@ -210,7 +210,7 @@ export function ContactSection() {
             <div>
               <label htmlFor="service" className={labelClass}>
                 What do you need help with?{" "}
-                <span className="text-brand-orange">*</span>
+                <span className="text-brand-gold">*</span>
               </label>
               <select
                 id="service"
@@ -232,7 +232,7 @@ export function ContactSection() {
             <div className="grid gap-6 sm:grid-cols-2">
               <div>
                 <label htmlFor="budget" className={labelClass}>
-                  Budget Range <span className="text-brand-orange">*</span>
+                  Budget Range <span className="text-brand-gold">*</span>
                 </label>
                 <select
                   id="budget"
@@ -252,7 +252,7 @@ export function ContactSection() {
               </div>
               <div>
                 <label htmlFor="timeline" className={labelClass}>
-                  Timeline <span className="text-brand-orange">*</span>
+                  Timeline <span className="text-brand-gold">*</span>
                 </label>
                 <select id="timeline" name="timeline" required className={inputClass}>
                   <option value="">Select one</option>
@@ -267,7 +267,7 @@ export function ContactSection() {
 
             <div>
               <label htmlFor="message" className={labelClass}>
-                Message <span className="text-brand-orange">*</span>
+                Message <span className="text-brand-gold">*</span>
               </label>
               <textarea
                 id="message"
@@ -294,7 +294,7 @@ export function ContactSection() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full rounded-xl bg-brand-orange px-10 py-4 text-base font-semibold text-white shadow-lg shadow-brand-orange/25 transition-all duration-300 hover:bg-brand-orange-light hover:shadow-brand-orange/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange disabled:cursor-not-allowed disabled:opacity-60 sm:min-w-[280px] sm:w-auto"
+                className="w-full rounded-xl bg-brand-gold px-10 py-4 text-base font-semibold text-[#050505] shadow-lg shadow-brand-gold/25 transition-all duration-300 hover:bg-brand-gold-light hover:shadow-brand-gold/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold disabled:cursor-not-allowed disabled:opacity-60 sm:min-w-[280px] sm:w-auto"
               >
                 {submitting ? "Sending..." : "Send Project Request"}
               </button>
@@ -310,7 +310,7 @@ export function ContactSection() {
           Prefer to talk first?{" "}
           <a
             href={`tel:${siteConfig.phoneTel}`}
-            className="font-medium text-brand-orange transition-colors hover:text-brand-orange-light hover:underline"
+            className="font-medium text-brand-gold transition-colors hover:text-brand-gold-light hover:underline"
           >
             Call {siteConfig.phone}
           </a>

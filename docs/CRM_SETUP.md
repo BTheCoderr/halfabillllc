@@ -1,4 +1,4 @@
-# INTERNAL ONLY — Half A Bil Agency CRM Setup
+# INTERNAL ONLY — HalfABilAgency CRM Setup
 
 > **Not for the public website.** This document is for the owner/operator only.  
 > Do not link this from navigation, footers, or any customer-facing page.

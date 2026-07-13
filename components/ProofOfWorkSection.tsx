@@ -12,7 +12,7 @@ export function ProofOfWorkSection() {
           <SectionHeading
             eyebrow="Founder-Built Systems"
             title="Proof of Work, Not Just Promises"
-            subtitle="Half A Bil Agency is built around practical systems: websites, apps, automations, forms, dashboards, booking flows, and payment-ready funnels."
+            subtitle="HalfABilAgency is built around practical systems: websites, apps, automations, forms, dashboards, booking flows, and payment-ready funnels."
           />
         </FadeInSection>
 
@@ -23,8 +23,8 @@ export function ProofOfWorkSection() {
               <FadeInSection key={system.title} delay={index * 70}>
                 <GlassCard className="group h-full">
                   <div className="mb-5 flex items-center justify-between">
-                    <div className="inline-flex rounded-xl bg-brand-orange/10 p-3 ring-1 ring-brand-orange/20 transition-all group-hover:bg-brand-orange/15 group-hover:ring-brand-orange/35">
-                      <Icon className="h-6 w-6 text-brand-orange" aria-hidden="true" />
+                    <div className="inline-flex rounded-xl bg-brand-gold/10 p-3 ring-1 ring-brand-gold/20 transition-all group-hover:bg-brand-gold/15 group-hover:ring-brand-gold/35">
+                      <Icon className="h-6 w-6 text-brand-gold" aria-hidden="true" />
                     </div>
                     <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
                       {system.tag}

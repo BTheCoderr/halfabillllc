@@ -31,8 +31,8 @@ export function ServicesSection() {
             const Icon = iconMap[service.icon as keyof typeof iconMap];
             return (
               <GlassCard key={service.title} className="group">
-                <div className="mb-5 inline-flex rounded-xl bg-brand-orange/10 p-3 ring-1 ring-brand-orange/20 transition-all group-hover:bg-brand-orange/15">
-                  <Icon className="h-6 w-6 text-brand-orange" aria-hidden="true" />
+                <div className="mb-5 inline-flex rounded-xl bg-brand-gold/10 p-3 ring-1 ring-brand-gold/20 transition-all group-hover:bg-brand-gold/15">
+                  <Icon className="h-6 w-6 text-brand-gold" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-semibold text-white">
                   {service.title}

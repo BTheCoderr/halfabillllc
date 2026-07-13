@@ -15,10 +15,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteTitle =
-  "Half A Bil Agency | Websites, Apps, MVPs, and Business Automations";
+const siteTitle = "HalfABilAgency | Websites, Apps and AI Systems";
 const siteDescription =
-  "Half A Bil Agency builds websites, apps, MVPs, landing pages, and business automations for companies that need practical digital systems fast.";
+  "HalfABilAgency builds websites, apps, AI systems, landing pages, and business automations for companies that need practical digital systems fast.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(

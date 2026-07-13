@@ -16,12 +16,12 @@ export function ProcessSection() {
             <article key={step.title} className="relative">
               {index < processSteps.length - 1 && (
                 <div
-                  className="absolute top-10 hidden h-px w-full bg-gradient-to-r from-brand-orange/40 to-transparent lg:block"
+                  className="absolute top-10 hidden h-px w-full bg-gradient-to-r from-brand-gold/40 to-transparent lg:block"
                   aria-hidden="true"
                 />
               )}
               <div className="glass-card glass-card-hover h-full rounded-2xl p-7">
-                <span className="font-mono text-2xl font-bold text-brand-orange">
+                <span className="font-mono text-2xl font-bold text-brand-gold">
                   {step.step}
                 </span>
                 <h3 className="mt-4 text-lg font-semibold text-white">

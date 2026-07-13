@@ -2,7 +2,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { HeroDashboard } from "@/components/HeroDashboard";
 import { HeroBrandLockup } from "@/components/HeroBrandLockup";
-import { getBookingHref, siteConfig } from "@/lib/site-data";
+import { getBookingHref } from "@/lib/site-data";
 
 export function Hero() {
   return (
@@ -12,8 +12,8 @@ export function Hero() {
     >
       <div className="pointer-events-none absolute inset-0 grid-bg" />
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-40 left-1/2 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-brand-orange/8 blur-[120px]" />
-        <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-brand-orange/5 blur-[100px]" />
+        <div className="absolute -top-40 left-1/2 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-brand-gold/8 blur-[120px]" />
+        <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-brand-gold/5 blur-[100px]" />
       </div>
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:gap-16 lg:px-8">
@@ -22,7 +22,7 @@ export function Hero() {
 
           <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[3.25rem]">
             Websites, Apps, and Automations Built for Businesses That Need to{" "}
-            <span className="bg-gradient-to-r from-brand-orange to-brand-orange-light bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-gold to-brand-gold-light bg-clip-text text-transparent">
               Move Faster
             </span>
           </h1>
@@ -44,7 +44,7 @@ export function Hero() {
 
           <p className="mt-8 flex items-start gap-2.5 text-sm text-zinc-500">
             <CheckCircle2
-              className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange"
+              className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold"
               aria-hidden="true"
             />
             Fast builds. Clear pricing. Practical systems your business can

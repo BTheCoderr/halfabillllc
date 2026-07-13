@@ -3,10 +3,11 @@
 :root {
   --background: #050505;
   --foreground: #ffffff;
-  --brand-orange: #f5821f;
-  --brand-orange-light: #ff9a3d;
-  --brand-charcoal: #141414;
-  --brand-surface: #1a1a1a;
+  --brand-gold: #d4af37;
+  --brand-gold-light: #f2d675;
+  --brand-gold-deep: #9a6b16;
+  --brand-charcoal: #0d0d0d;
+  --brand-surface: #111111;
   --brand-gray: #a1a1aa;
   --brand-muted: #71717a;
 }
@@ -14,8 +15,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-brand-orange: var(--brand-orange);
-  --color-brand-orange-light: var(--brand-orange-light);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-gold-light: var(--brand-gold-light);
+  --color-brand-gold-deep: var(--brand-gold-deep);
   --color-brand-charcoal: var(--brand-charcoal);
   --color-brand-surface: var(--brand-surface);
   --color-brand-gray: var(--brand-gray);
@@ -35,12 +37,12 @@ body {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--brand-orange) 35%, transparent);
+  background: color-mix(in srgb, var(--brand-gold) 35%, transparent);
   color: #ffffff;
 }
 
 select option {
-  background: #141414;
+  background: #111111;
   color: #ffffff;
 }
 
@@ -80,8 +82,8 @@ textarea {
 }
 
 .glass-card-hover:hover {
-  border-color: rgba(245, 130, 31, 0.35);
-  box-shadow: 0 8px 32px rgba(245, 130, 31, 0.08);
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.08);
   transform: translateY(-2px);
 }
 
@@ -97,7 +99,7 @@ textarea {
   padding: 1px;
   background: linear-gradient(
     135deg,
-    rgba(245, 130, 31, 0.5),
+    rgba(212, 175, 55, 0.5),
     rgba(255, 255, 255, 0.1),
     transparent
   );

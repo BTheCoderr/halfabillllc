@@ -1,10 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
-  <title>Half A Bil Agency</title>
-  <circle cx="24" cy="24" r="22" fill="#F5821F"/>
-  <path d="M28 8L38 38H32L30 30H18L16 38H10L20 8H28Z" fill="#231F20"/>
-  <path d="M21 16H27V20H24V28H21V16Z M24 20H27V24H24V20Z" fill="#FFFFFF"/>
-  <circle cx="34" cy="14" r="2.5" fill="#FFFFFF"/>
-  <circle cx="14" cy="34" r="2" fill="#F5821F" stroke="#FFFFFF" stroke-width="1.2"/>
-  <path d="M34 14L28 20M14 34L20 28" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="36" cy="32" r="1.5" fill="#FFFFFF" opacity="0.85"/>
+  <title>HalfABilAgency</title>
+  <defs>
+    <linearGradient id="hab-gold" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F2D675"/>
+      <stop offset="0.5" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#9A6B16"/>
+    </linearGradient>
+  </defs>
+  <path d="M1.5 13H5.5V22H9.5V13H13.5V35H9.5V26H5.5V35H1.5Z" fill="url(#hab-gold)"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2 13H25.3L31 35H27L25.8 30.5H20.7L19.5 35H15.5L21.2 13ZM23.25 18L25.5 26.5H21L23.25 18Z" fill="url(#hab-gold)"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M33 13H41.2A5.1 5.1 0 0 1 41.2 23.2H41.7A5.9 5.9 0 0 1 41.7 35H33V13ZM37 16.9H40.8A2.05 2.05 0 0 1 40.8 21H37V16.9ZM37 25.4H41.2A2.6 2.6 0 0 1 41.2 30.6H37V25.4Z" fill="url(#hab-gold)"/>
+  <path d="M1.5 39.5H46.5" stroke="url(#hab-gold)" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
 </svg>

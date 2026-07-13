@@ -24,8 +24,8 @@ export function Logo({
   className = "",
   decorative = false,
 }: LogoProps) {
-  const titleId = "half-a-bil-logo-title";
-  const descId = "half-a-bil-logo-desc";
+  const titleId = `halfabilagency-logo-${variant}-title`;
+  const descId = `halfabilagency-logo-${variant}-desc`;
   const dims = sizeMap[size][variant];
   const a11y = decorative
     ? { "aria-hidden": true as const }
@@ -41,6 +41,7 @@ export function Logo({
         decorative={decorative}
         titleId={titleId}
         descId={descId}
+        gradientId="hab-gold-logo-mark"
       />
     );
   }
@@ -48,7 +49,7 @@ export function Logo({
   if (variant === "horizontal") {
     return (
       <svg
-        viewBox="0 0 300 48"
+        viewBox="0 0 236 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={`${dims} ${className}`}
@@ -60,15 +61,13 @@ export function Logo({
             <desc id={descId}>{logoCopy.desc}</desc>
           </>
         )}
-        <g transform="translate(0 0)">
-          <LogoMarkPaths />
-        </g>
+        <LogoMarkPaths gradientId="hab-gold-horizontal" />
         <text
-          x="56"
+          x="58"
           y="31"
           fill={logoColors.white}
-          fontFamily="system-ui, -apple-system, sans-serif"
-          fontSize="17"
+          fontFamily="var(--font-geist-sans), system-ui, -apple-system, sans-serif"
+          fontSize="19"
           fontWeight="700"
           letterSpacing="-0.02em"
         >
@@ -80,7 +79,7 @@ export function Logo({
 
   return (
     <svg
-      viewBox="0 0 220 128"
+      viewBox="0 0 220 122"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={`${dims} ${className}`}
@@ -92,16 +91,16 @@ export function Logo({
           <desc id={descId}>{logoCopy.desc}</desc>
         </>
       )}
-      <g transform="translate(86 0) scale(1.08)">
-        <LogoMarkPaths />
+      <g transform="translate(84 0) scale(1.08)">
+        <LogoMarkPaths gradientId="hab-gold-stacked" />
       </g>
       <text
         x="110"
-        y="72"
+        y="80"
         textAnchor="middle"
         fill={logoColors.white}
-        fontFamily="system-ui, -apple-system, sans-serif"
-        fontSize="16"
+        fontFamily="var(--font-geist-sans), system-ui, -apple-system, sans-serif"
+        fontSize="18"
         fontWeight="700"
         letterSpacing="-0.02em"
       >
@@ -109,27 +108,15 @@ export function Logo({
       </text>
       <text
         x="110"
-        y="96"
+        y="104"
         textAnchor="middle"
-        fill={logoColors.orange}
-        fontFamily="system-ui, -apple-system, sans-serif"
+        fill={logoColors.gold}
+        fontFamily="var(--font-geist-sans), system-ui, -apple-system, sans-serif"
         fontSize="11"
         fontWeight="600"
-        letterSpacing="0.06em"
+        letterSpacing="0.08em"
       >
         {logoCopy.tagline}
-      </text>
-      <text
-        x="110"
-        y="118"
-        textAnchor="middle"
-        fill="#71717a"
-        fontFamily="system-ui, -apple-system, sans-serif"
-        fontSize="10"
-        fontWeight="500"
-        letterSpacing="0.04em"
-      >
-        Websites. Apps. Automations.
       </text>
     </svg>
   );

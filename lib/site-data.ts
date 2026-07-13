@@ -9,8 +9,8 @@ export function isLivePaymentUrl(url: string): boolean {
 }
 
 export const siteConfig = {
-  name: "Half A Bil Agency",
-  brandLine: "Full Service Half A Bil",
+  name: "HalfABilAgency",
+  brandLine: "Full Service Half A Bil.",
   tagline: "Websites. Apps. Automations.",
   email: "hello@halfabilagency.com",
   phone: "(401) 217-9799",

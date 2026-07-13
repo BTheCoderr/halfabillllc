@@ -1,4 +1,4 @@
-# INTERNAL ONLY — Half A Bil Agency Free Stack Setup
+# INTERNAL ONLY — HalfABilAgency Free Stack Setup
 
 > **Not for the public website.** Operator setup guide only.
 
@@ -6,7 +6,7 @@
 
 ## Public website (what visitors see)
 
-The live site at **Half A Bil Agency** should only expose:
+The live site at **HalfABilAgency** should only expose:
 
 - Services
 - Process
@@ -49,7 +49,7 @@ The live site at **Half A Bil Agency** should only expose:
 
 ### 3. Raw call list — Google Sheets
 
-- One spreadsheet: **Half A Bil — Call List**
+- One spreadsheet: **HalfABilAgency — Call List**
 - Columns per [COLD_CALL_SYSTEM.md](./COLD_CALL_SYSTEM.md)
 - Share only with operator account
 

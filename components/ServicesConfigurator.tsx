@@ -52,15 +52,15 @@ export function ServicesConfigurator() {
                 key={option.id}
                 type="button"
                 onClick={() => handleSelect(option.id)}
-                className={`group inline-flex items-center gap-2.5 rounded-full border px-5 py-3 text-sm font-medium transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange ${
+                className={`group inline-flex items-center gap-2.5 rounded-full border px-5 py-3 text-sm font-medium transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold ${
                   isSelected
-                    ? "border-brand-orange bg-brand-orange/15 text-white shadow-lg shadow-brand-orange/15"
-                    : "border-white/10 bg-white/[0.03] text-zinc-300 hover:border-brand-orange/40 hover:bg-brand-orange/10 hover:text-white"
+                    ? "border-brand-gold bg-brand-gold/15 text-white shadow-lg shadow-brand-gold/15"
+                    : "border-white/10 bg-white/[0.03] text-zinc-300 hover:border-brand-gold/40 hover:bg-brand-gold/10 hover:text-white"
                 }`}
               >
                 <Icon
                   className={`h-4 w-4 shrink-0 ${
-                    isSelected ? "text-brand-orange" : "text-zinc-500 group-hover:text-brand-orange"
+                    isSelected ? "text-brand-gold" : "text-zinc-500 group-hover:text-brand-gold"
                   }`}
                   aria-hidden="true"
                 />
@@ -69,7 +69,7 @@ export function ServicesConfigurator() {
                   {option.hint}
                 </span>
                 {isSelected && (
-                  <Check className="h-4 w-4 text-brand-orange" aria-hidden="true" />
+                  <Check className="h-4 w-4 text-brand-gold" aria-hidden="true" />
                 )}
               </button>
             );
@@ -77,7 +77,7 @@ export function ServicesConfigurator() {
         </div>
 
         <p className="mt-8 flex items-center justify-center gap-2 text-center text-sm text-zinc-500">
-          <ArrowRight className="h-4 w-4 text-brand-orange" aria-hidden="true" />
+          <ArrowRight className="h-4 w-4 text-brand-gold" aria-hidden="true" />
           Selecting a chip scrolls to the form with service, budget, and message pre-filled.
         </p>
       </div>

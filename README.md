@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HalfABilAgency
+
+Full Service Half A Bil.
+
+Marketing site for HalfABilAgency — websites, apps, AI systems, and business automations. Built with [Next.js](https://nextjs.org), React, TypeScript, and Tailwind CSS, deployed on Netlify.
 
 ## Getting Started
 

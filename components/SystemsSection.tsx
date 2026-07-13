@@ -30,7 +30,7 @@ export function SystemsSection() {
 
         <div className="relative">
           <div
-            className="absolute left-0 right-0 top-1/2 hidden h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-brand-orange/40 to-transparent lg:block"
+            className="absolute left-0 right-0 top-1/2 hidden h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-brand-gold/40 to-transparent lg:block"
             aria-hidden="true"
           />
 
@@ -41,15 +41,15 @@ export function SystemsSection() {
                 <div key={step.label} className="relative">
                   {index < systemSteps.length - 1 && (
                     <div
-                      className="absolute -right-2 top-1/2 z-10 hidden h-px w-4 bg-brand-orange/50 xl:block"
+                      className="absolute -right-2 top-1/2 z-10 hidden h-px w-4 bg-brand-gold/50 xl:block"
                       aria-hidden="true"
                     />
                   )}
                   <div className="glass-card glass-card-hover flex h-full flex-col items-center rounded-2xl p-5 text-center">
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand-orange/10 ring-2 ring-brand-orange/30">
-                      <Icon className="h-5 w-5 text-brand-orange" />
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand-gold/10 ring-2 ring-brand-gold/30">
+                      <Icon className="h-5 w-5 text-brand-gold" />
                     </div>
-                    <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-brand-orange">
+                    <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-brand-gold">
                       Step {index + 1}
                     </span>
                     <p className="text-sm font-semibold leading-snug text-white">
@@ -64,7 +64,7 @@ export function SystemsSection() {
 
         <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-black/50 p-6 font-mono text-xs sm:p-8">
           <div className="mb-4 flex items-center gap-2 text-zinc-500">
-            <span className="h-2 w-2 rounded-full bg-brand-orange" />
+            <span className="h-2 w-2 rounded-full bg-brand-gold" />
             <span>automation.workflow</span>
           </div>
           <pre className="overflow-x-auto text-zinc-400">

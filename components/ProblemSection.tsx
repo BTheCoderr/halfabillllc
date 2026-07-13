@@ -26,8 +26,8 @@ export function ProblemSection() {
             const Icon = iconMap[card.icon as keyof typeof iconMap];
             return (
               <GlassCard key={card.title}>
-                <div className="mb-5 inline-flex rounded-xl bg-brand-orange/10 p-3 ring-1 ring-brand-orange/20">
-                  <Icon className="h-5 w-5 text-brand-orange" aria-hidden="true" />
+                <div className="mb-5 inline-flex rounded-xl bg-brand-gold/10 p-3 ring-1 ring-brand-gold/20">
+                  <Icon className="h-5 w-5 text-brand-gold" aria-hidden="true" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{card.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-zinc-400">

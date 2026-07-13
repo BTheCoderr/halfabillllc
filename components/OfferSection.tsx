@@ -21,12 +21,12 @@ export function OfferSection() {
               hover={false}
               className={`relative flex flex-col ${
                 pkg.highlighted
-                  ? "gradient-border ring-1 ring-brand-orange/30 shadow-xl shadow-brand-orange/10"
+                  ? "gradient-border ring-1 ring-brand-gold/30 shadow-xl shadow-brand-gold/10"
                   : ""
               }`}
             >
               {pkg.highlighted && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-orange px-4 py-1 text-[10px] font-bold uppercase tracking-widest text-white">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-gold px-4 py-1 text-[10px] font-bold uppercase tracking-widest text-[#050505]">
                   Most Popular
                 </span>
               )}
@@ -34,7 +34,7 @@ export function OfferSection() {
               <h3 className="text-xl font-bold text-white">{pkg.name}</h3>
               <p className="mt-2 text-sm text-zinc-400">{pkg.tagline}</p>
 
-              <p className="mt-6 text-3xl font-bold text-brand-orange">
+              <p className="mt-6 text-3xl font-bold text-brand-gold">
                 {pkg.price}
               </p>
 
@@ -49,7 +49,7 @@ export function OfferSection() {
                     className="flex items-start gap-3 text-sm text-zinc-300"
                   >
                     <Check
-                      className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold"
                       aria-hidden="true"
                     />
                     {feature}

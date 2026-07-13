@@ -31,16 +31,16 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-white/10 bg-black/80 backdrop-blur-xl"
+          ? "border-b border-brand-gold/20 bg-black/80 backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
         <Link
           href="#top"
-          className="group flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange"
+          className="group flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-gold"
           onClick={closeMenu}
-          aria-label="Half A Bil Agency — home"
+          aria-label="HalfABilAgency home"
         >
           <Logo
             variant="mark"
@@ -64,7 +64,7 @@ export function Header() {
             <Link
               key={link.href + link.label}
               href={link.href}
-              className="text-sm font-medium text-zinc-400 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange"
+              className="text-sm font-medium text-zinc-400 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-gold"
             >
               {link.label}
             </Link>

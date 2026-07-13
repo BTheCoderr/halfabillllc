@@ -13,10 +13,10 @@ interface ButtonProps {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-brand-orange text-white hover:bg-brand-orange-light shadow-lg shadow-brand-orange/25 hover:shadow-brand-orange/40",
+    "bg-brand-gold text-[#050505] hover:bg-brand-gold-light shadow-lg shadow-brand-gold/20 hover:shadow-brand-gold/35",
   secondary:
-    "border border-white/15 bg-white/5 text-white hover:border-brand-orange/40 hover:bg-brand-orange/10 backdrop-blur-sm",
-  ghost: "text-zinc-400 hover:text-brand-orange",
+    "border border-brand-gold/40 bg-black/40 text-white hover:border-brand-gold/70 hover:bg-brand-gold/10 backdrop-blur-sm",
+  ghost: "text-zinc-400 hover:text-brand-gold",
 };
 
 export function Button({
@@ -27,7 +27,7 @@ export function Button({
   onClick,
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange";
+    "inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold";
 
   const isExternal = href.startsWith("http");
 

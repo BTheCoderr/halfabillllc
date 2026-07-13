@@ -13,7 +13,7 @@ export function HeroBrandLockup() {
       <p className="mt-5 text-lg font-bold tracking-tight text-white lg:text-[22px]">
         {siteConfig.name}
       </p>
-      <p className="mt-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-orange lg:text-[13px]">
+      <p className="mt-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-gold lg:text-[13px]">
         {siteConfig.brandLine}
       </p>
       <p className="mt-2 text-xs text-zinc-500">{siteConfig.tagline}</p>

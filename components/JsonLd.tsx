@@ -9,7 +9,7 @@ export function JsonLd() {
     "@type": "ProfessionalService",
     name: siteConfig.name,
     description:
-      "Half A Bil Agency builds websites, apps, MVPs, landing pages, and business automations for companies that need practical digital systems fast.",
+      "HalfABilAgency builds websites, apps, AI systems, landing pages, and business automations for companies that need practical digital systems fast.",
     url: siteUrl,
     telephone: siteConfig.phone,
     email: siteConfig.email,

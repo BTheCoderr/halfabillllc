@@ -26,8 +26,8 @@ export function WhatWeBuildSection() {
                 <article className="gradient-border flex h-full flex-col rounded-2xl glass-card glass-card-hover overflow-hidden">
                   <div className="border-b border-white/10 bg-white/[0.03] px-6 py-5">
                     <div className="flex items-center gap-3">
-                      <div className="rounded-lg bg-brand-orange/10 p-2.5 ring-1 ring-brand-orange/20">
-                        <Icon className="h-5 w-5 text-brand-orange" aria-hidden="true" />
+                      <div className="rounded-lg bg-brand-gold/10 p-2.5 ring-1 ring-brand-gold/20">
+                        <Icon className="h-5 w-5 text-brand-gold" aria-hidden="true" />
                       </div>
                       <h3 className="text-lg font-bold text-white">{study.title}</h3>
                     </div>
@@ -45,13 +45,13 @@ export function WhatWeBuildSection() {
                       </p>
                       <p className="mt-1.5 text-sm text-zinc-300">{study.build}</p>
                     </div>
-                    <div className="mt-auto rounded-xl border border-brand-orange/20 bg-brand-orange/5 p-4">
-                      <p className="text-[11px] font-semibold uppercase tracking-widest text-brand-orange">
+                    <div className="mt-auto rounded-xl border border-brand-gold/20 bg-brand-gold/5 p-4">
+                      <p className="text-[11px] font-semibold uppercase tracking-widest text-brand-gold">
                         Example outcome
                       </p>
                       <p className="mt-1.5 flex items-start gap-2 text-sm leading-relaxed text-zinc-300">
                         <ArrowRight
-                          className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange"
+                          className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold"
                           aria-hidden="true"
                         />
                         {study.outcome.replace(/^Typical outcome: /, "")}

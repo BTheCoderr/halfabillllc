@@ -151,10 +151,10 @@ export const visualTechStack = [
   { name: "Supabase", color: "from-emerald-500/20 to-emerald-500/5" },
   { name: "Netlify", color: "from-teal-400/15 to-teal-400/5" },
   { name: "Stripe", color: "from-violet-500/20 to-violet-500/5" },
-  { name: "HubSpot", color: "from-orange-500/20 to-orange-500/5" },
+  { name: "HubSpot", color: "from-amber-600/20 to-amber-600/5" },
   { name: "Calendly", color: "from-blue-400/15 to-blue-400/5" },
   { name: "Python", color: "from-yellow-500/15 to-yellow-500/5" },
-  { name: "APIs", color: "from-brand-orange/20 to-brand-orange/5" },
+  { name: "APIs", color: "from-brand-gold/20 to-brand-gold/5" },
   { name: "Automation Tools", color: "from-zinc-500/20 to-zinc-500/5" },
 ] as const;
 
@@ -231,7 +231,7 @@ export const recentBuilds: PortfolioProject[] = [
     mockupTheme: "property",
   },
   {
-    title: "Half A Bil Agency",
+    title: "HalfABilAgency",
     tagline: "Agency site with intake, booking, and deposit-ready project flow.",
     type: "Website",
     stack: ["Next.js", "TypeScript", "Tailwind", "Netlify"],
@@ -239,7 +239,7 @@ export const recentBuilds: PortfolioProject[] = [
     build: "Landing page, project form, Calendly booking, and payment section.",
     status: "Founder-built",
     imageSrc: "/work/half-a-bil-agency.png",
-    imageAlt: "Half A Bil Agency website homepage preview",
+    imageAlt: "HalfABilAgency website homepage preview",
     liveUrl: "https://halfabilagency.netlify.app",
     githubUrl: "https://github.com/BTheCoderr/halfabillllc",
     mockupTheme: "agency",

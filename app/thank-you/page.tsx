@@ -8,7 +8,7 @@ export default function ThankYouPage() {
     <main className="relative flex min-h-screen flex-col items-center justify-center px-5 py-16 sm:py-20">
       <div className="pointer-events-none absolute inset-0 grid-bg opacity-40" />
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-1/3 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-orange/10 blur-[100px]" />
+        <div className="absolute left-1/2 top-1/3 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-gold/10 blur-[100px]" />
       </div>
 
       <div className="gradient-border relative w-full max-w-[580px]">
@@ -23,7 +23,7 @@ export default function ThankYouPage() {
             <p className="mt-5 text-lg font-bold tracking-tight text-white sm:text-[22px]">
               {siteConfig.name}
             </p>
-            <p className="mt-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-orange sm:text-sm">
+            <p className="mt-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-gold sm:text-sm">
               {siteConfig.brandLine}
             </p>
             <p className="mt-2 text-xs text-zinc-500">{siteConfig.tagline}</p>
@@ -49,7 +49,7 @@ export default function ThankYouPage() {
               Need to add more details?{" "}
               <Link
                 href="/#contact"
-                className="font-medium text-brand-orange transition-colors hover:text-brand-orange-light hover:underline"
+                className="font-medium text-brand-gold transition-colors hover:text-brand-gold-light hover:underline"
               >
                 Send another message
               </Link>

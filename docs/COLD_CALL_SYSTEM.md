@@ -1,4 +1,4 @@
-# INTERNAL ONLY — Half A Bil Agency Cold Call System
+# INTERNAL ONLY — HalfABilAgency Cold Call System
 
 > **Not for the public website.** This document is for the owner/operator only.  
 > Do not create public routes like `/outreach-system` or `/crm-setup`.

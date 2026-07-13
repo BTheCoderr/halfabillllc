@@ -13,7 +13,7 @@ const themeStyles: Record<
   { accent: string; label: string; blocks: string[] }
 > = {
   legal: {
-    accent: "from-blue-500/20 to-brand-orange/15",
+    accent: "from-blue-500/20 to-brand-gold/15",
     label: "Legal platform UI",
     blocks: ["Intake", "AI Guide", "Documents"],
   },
@@ -23,12 +23,12 @@ const themeStyles: Record<
     blocks: ["Services", "Intake", "Contact"],
   },
   delivery: {
-    accent: "from-brand-orange/25 to-amber-500/10",
+    accent: "from-brand-gold/25 to-amber-500/10",
     label: "Service business UI",
     blocks: ["Services", "Quote", "Fleet"],
   },
   journal: {
-    accent: "from-violet-500/20 to-brand-orange/10",
+    accent: "from-violet-500/20 to-brand-gold/10",
     label: "AI journal UI",
     blocks: ["Notes", "Actions", "Weekly"],
   },
@@ -38,7 +38,7 @@ const themeStyles: Record<
     blocks: ["Stays", "Owners", "Inquiry"],
   },
   agency: {
-    accent: "from-brand-orange/30 to-orange-600/10",
+    accent: "from-brand-gold/30 to-brand-gold-deep/10",
     label: "Agency dashboard UI",
     blocks: ["Leads", "Book", "Pay"],
   },
@@ -72,7 +72,7 @@ export function ProjectMockupPlaceholder({
               key={block}
               className="flex flex-col rounded-lg border border-white/10 bg-black/25 p-2"
             >
-              <div className="mb-2 h-1.5 w-8 rounded bg-brand-orange/40" />
+              <div className="mb-2 h-1.5 w-8 rounded bg-brand-gold/40" />
               <div className="mt-auto text-[9px] font-medium uppercase tracking-wider text-zinc-500">
                 {block}
               </div>
@@ -81,7 +81,7 @@ export function ProjectMockupPlaceholder({
         </div>
         <div className="grid grid-cols-2 gap-2">
           <div className="h-10 rounded-lg border border-white/10 bg-black/20" />
-          <div className="h-10 rounded-lg border border-brand-orange/20 bg-brand-orange/5" />
+          <div className="h-10 rounded-lg border border-brand-gold/20 bg-brand-gold/5" />
         </div>
       </div>
       <p className="mt-3 text-center text-[10px] uppercase tracking-widest text-zinc-600">
