@@ -70,7 +70,7 @@ export function LiveSystemStackSection() {
                 Convert
               </p>
               <p className="mt-2 text-sm text-zinc-400">
-                Calendly booking + HubSpot pipeline + follow-up tasks.
+                GoHighLevel booking + HubSpot pipeline + follow-up tasks.
               </p>
             </div>
             <div className="gradient-border rounded-2xl glass-card p-6">

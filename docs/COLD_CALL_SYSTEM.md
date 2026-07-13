@@ -31,7 +31,7 @@ Create one sheet named **Call List** with these columns:
 | Call Outcome | Result of last call |
 | Pain Point | What they said is broken or missing |
 | Next Follow-Up Date | When to call back |
-| Calendly Link Sent | Yes / No |
+| Booking Link Sent | Yes / No |
 | Stripe Link Sent | Yes / No |
 | HubSpot Deal Created | Yes / No |
 | Notes | Free text |
@@ -64,7 +64,7 @@ Use the same language as the HubSpot pipeline for consistency:
 4. If **Interested**:
    - Set **HubSpot Deal Created** = Yes
    - Create contact + deal in HubSpot (same business name)
-   - Send Calendly link → mark **Calendly Link Sent** = Yes
+   - Send booking link → mark **Booking Link Sent** = Yes
 5. If **No Answer** → **Called - No Answer**, set **Next Follow-Up Date**.
 6. If **Not interested now** → **Lost / Not Now**, add reason in Notes.
 
@@ -76,7 +76,7 @@ Use the same language as the HubSpot pipeline for consistency:
 - "Spoke with owner — wants website quote"
 - "Wrong number"
 - "Already has agency — not now"
-- "Booked discovery — Calendly sent"
+- "Booked discovery — booking link sent"
 
 ---
 

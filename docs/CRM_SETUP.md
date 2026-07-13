@@ -7,7 +7,7 @@
 
 ## Purpose
 
-HubSpot Free CRM is the internal system of record for deals, follow-ups, and pipeline status after a lead shows interest. Visitors use the **project request form** and **Calendly** on the public site — they never see HubSpot.
+HubSpot Free CRM is the internal system of record for deals, follow-ups, and pipeline status after a lead shows interest. Visitors use the **project request form** and **GoHighLevel booking** on the public site — they never see HubSpot.
 
 ---
 
@@ -18,7 +18,7 @@ HubSpot Free CRM is the internal system of record for deals, follow-ups, and pip
 | **HubSpot Free CRM** | Deals, contacts, pipeline | Free |
 | **Google Sheets** | Raw cold call list | Free |
 | **Netlify Forms** | Website project requests | Free (with site) |
-| **Calendly Free** | Discovery call booking | Free |
+| **GoHighLevel** | Discovery call booking | Paid |
 | **Stripe Payment Links** | Deposits after proposal | Pay per transaction |
 | **Make.com** | Automation (later) | Free plan when ready |
 
@@ -53,7 +53,7 @@ Cold call lead (Google Sheets)
         ↓ yes
 Add/update contact + deal in HubSpot
         ↓
-Send Calendly link → Discovery Booked
+Send booking link → Discovery Booked
         ↓
 Send proposal → Proposal Sent
         ↓
@@ -76,7 +76,7 @@ Project complete → Won
 - [ ] Create deal pipeline with stages above
 - [ ] Create contact properties: Business Name, Industry, City, Source, Website, Google Rating
 - [ ] Create deal properties: Service Pitch, Pain Point, Call Status, Call Outcome, Next Follow-Up Date
-- [ ] Add checkboxes or notes: Calendly Link Sent, Stripe Link Sent
+- [ ] Add checkboxes or notes: Booking Link Sent, Stripe Link Sent
 - [ ] Set email notifications for new form submissions (via Netlify, not HubSpot form)
 - [ ] Bookmark HubSpot dashboard — do not expose URL on public site
 
@@ -87,7 +87,7 @@ Project complete → Won
 | Customer (public site) | Operator (internal) |
 |---|---|
 | Project request form | Netlify Forms inbox + HubSpot deal |
-| Book a Free Call (Calendly) | Pipeline → Discovery Booked |
+| Book a Free Call (GoHighLevel) | Pipeline → Discovery Booked |
 | Pay deposit (Stripe link sent privately) | Pipeline → Deposit Paid |
 | Services, pricing, process | Google Sheets call list |
 

@@ -15,8 +15,8 @@ export const siteConfig = {
   email: "hello@halfabilagency.com",
   phone: "(401) 217-9799",
   phoneTel: "4012179799",
-  /** Calendly booking page for discovery calls. */
-  bookingUrl: "https://calendly.com/bferrell514",
+  /** GoHighLevel booking widget for discovery calls. */
+  bookingUrl: "https://api.leadconnectorhq.com/widget/booking/hwhx4ZZKDiXfSr3VSgrm",
   /** Set NEXT_PUBLIC_STRIPE_STARTER_PAYMENT_URL in Netlify env (Stripe Payment Link). */
   starterPaymentUrl: readPublicPaymentUrl("NEXT_PUBLIC_STRIPE_STARTER_PAYMENT_URL"),
   /** Set NEXT_PUBLIC_STRIPE_SYSTEM_PAYMENT_URL in Netlify env (Stripe Payment Link). */
@@ -38,12 +38,9 @@ export const navLinks = [
   { label: "Start a Project", href: "#contact" },
 ];
 
-/** Calendly until bookingUrl is replaced; falls back to project form. */
+/** Booking page for discovery calls; falls back to the project form if unset. */
 export function getBookingHref(): string {
-  if (siteConfig.bookingUrl.includes("YOUR-CALENDLY-LINK")) {
-    return "#contact";
-  }
-  return siteConfig.bookingUrl;
+  return siteConfig.bookingUrl || "#contact";
 }
 
 export const footerLinks = [

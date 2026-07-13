@@ -73,4 +73,4 @@ You should see a blank/minimal page (form is hidden). If you get a Next.js 404, 
 1. **Clear cache and redeploy** on Netlify
 2. Confirm **Forms** are enabled (Site settings → Forms)
 3. Try a different notification email
-4. Use Calendly + phone as backup until form email works
+4. Use the GoHighLevel booking link + phone as backup until form email works

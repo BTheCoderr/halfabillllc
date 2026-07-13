@@ -63,7 +63,7 @@ const buildItems = [
     status: "Synced",
     progress: 100,
     icon: Calendar,
-    detail: "Calendly · Reminders",
+    detail: "GoHighLevel · Reminders",
   },
   {
     label: "Payment Link",

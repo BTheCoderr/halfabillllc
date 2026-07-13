@@ -13,7 +13,7 @@ The live site at **HalfABilAgency** should only expose:
 - Systems
 - Pricing
 - **Start a Project** (Netlify form → `project-request`)
-- **Book a Free Call** (Calendly — configure link below)
+- **Book a Free Call** (GoHighLevel booking widget — configure link below)
 - Payment/deposit **only** via a polished Stripe link sent privately after a proposal — not as internal ops UI
 
 **Navigation (public):**
@@ -53,12 +53,12 @@ The live site at **HalfABilAgency** should only expose:
 - Columns per [COLD_CALL_SYSTEM.md](./COLD_CALL_SYSTEM.md)
 - Share only with operator account
 
-### 4. Booking — Calendly Free
+### 4. Booking — GoHighLevel calendar
 
-- Create event: **Free Discovery Call** (15–30 min)
+- Create calendar: **Free Discovery Call** (15–30 min) in GoHighLevel → Settings → Calendars
 - Set availability and buffer times
-- Copy booking link
-- **Public site:** `bookingUrl` → `https://calendly.com/bferrell514`
+- Copy the booking widget link
+- **Public site:** `bookingUrl` → `https://api.leadconnectorhq.com/widget/booking/hwhx4ZZKDiXfSr3VSgrm`
 
 ### 5. Payments — Stripe Payment Links
 
@@ -87,7 +87,7 @@ The live site at **HalfABilAgency** should only expose:
 | Proposal sent | Email PDF/link, update stage |
 | Deposit paid | Stripe notification → update stage |
 
-**Later only after manual flow works:** Make.com free plan or Zapier — Netlify webhook → HubSpot, Calendly → HubSpot, etc. Do not automate before the manual process is reliable.
+**Later only after manual flow works:** Make.com free plan or Zapier — Netlify webhook → HubSpot, GoHighLevel → HubSpot, etc. Do not automate before the manual process is reliable.
 
 ### 7. Phone
 
@@ -102,7 +102,7 @@ The live site at **HalfABilAgency** should only expose:
 
 ```env
 NEXT_PUBLIC_SITE_URL=https://yourdomain.com
-# NEXT_PUBLIC_CALENDLY_URL=https://calendly.com/...
+# Booking link is set directly in lib/site-data.ts (bookingUrl)
 ```
 
 Do not commit secrets. Stripe secret keys stay in Stripe Dashboard only.
@@ -123,7 +123,7 @@ Do not commit secrets. Stripe secret keys stay in Stripe Dashboard only.
 | Visitor action | Operator action |
 |---|---|
 | Submits project form | Netlify notify → HubSpot lead |
-| Books Calendly | Stage: Discovery Booked |
+| Books a call (GoHighLevel) | Stage: Discovery Booked |
 | Receives proposal | Stage: Proposal Sent |
 | Pays Stripe link | Stage: Deposit Paid |
 | Project starts | Stage: Build In Progress |

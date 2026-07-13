@@ -44,7 +44,7 @@ export const proofSystems: ProofSystem[] = [
   {
     title: "Lead Capture Funnel",
     description:
-      "Landing page, Netlify form, CRM-ready lead capture, Calendly booking, and Stripe payment link path.",
+      "Landing page, Netlify form, CRM-ready lead capture, GoHighLevel booking, and Stripe payment link path.",
     icon: Workflow,
     tag: "Example system",
   },
@@ -66,7 +66,7 @@ export const liveStackNodes: StackNode[] = [
   { label: "Website", icon: Globe },
   { label: "Netlify Forms", icon: LayoutTemplate },
   { label: "HubSpot CRM", icon: Users },
-  { label: "Calendly Booking", icon: Calendar },
+  { label: "GoHighLevel Booking", icon: Calendar },
   { label: "Stripe Payment Links", icon: CreditCard },
   { label: "Google Sheets Call Tracker", icon: FileSpreadsheet },
 ];
@@ -110,7 +110,7 @@ export const techCapabilities = [
   "Netlify",
   "Stripe",
   "HubSpot",
-  "Calendly",
+  "GoHighLevel",
   "AI workflow tools",
   "Automation tools",
   "APIs",
@@ -152,6 +152,6 @@ export const whyAgencyCards: WhyCard[] = [
   {
     title: "Lead capture to payment flow",
     description:
-      "Forms, CRM handoff, Calendly booking, and Stripe deposit links wired into one system.",
+      "Forms, CRM handoff, GoHighLevel booking, and Stripe deposit links wired into one system.",
   },
 ];

@@ -106,7 +106,7 @@ export function ContactSection() {
       window.location.href = "/thank-you";
     } catch {
       setError(
-        `Something went wrong sending your request. Please try again, call ${siteConfig.phone}, or book a call on Calendly.`
+        `Something went wrong sending your request. Please try again, call ${siteConfig.phone}, or use the booking link.`
       );
       setSubmitting(false);
     }
