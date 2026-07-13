@@ -17,17 +17,25 @@ export function WhyAgencySection() {
           />
         </FadeInSection>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {whyAgencyCards.map((card, index) => (
-            <FadeInSection key={card.title} delay={index * 60}>
-              <GlassCard className="h-full">
-                <h3 className="text-base font-semibold text-white">{card.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-                  {card.description}
-                </p>
-              </GlassCard>
-            </FadeInSection>
-          ))}
+        <div className="grid gap-6 sm:grid-cols-3">
+          {whyAgencyCards.map((card, index) => {
+            const Icon = card.icon;
+            return (
+              <FadeInSection key={card.title} delay={index * 80}>
+                <GlassCard className="h-full text-center sm:text-left">
+                  <div className="mx-auto inline-flex rounded-xl bg-brand-gold/10 p-3 ring-1 ring-brand-gold/20 sm:mx-0">
+                    <Icon className="h-6 w-6 text-brand-gold" aria-hidden="true" />
+                  </div>
+                  <h3 className="mt-5 text-lg font-semibold text-white">
+                    {card.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+                    {card.description}
+                  </p>
+                </GlassCard>
+              </FadeInSection>
+            );
+          })}
         </div>
       </div>
     </section>

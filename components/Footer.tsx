@@ -34,14 +34,14 @@ export function Footer() {
             <p className="mb-2 text-xs font-bold uppercase tracking-widest text-zinc-500">
               Get Started
             </p>
-            <p className="text-lg font-semibold text-white">Ready to build?</p>
+            <p className="text-lg font-semibold text-white">Ready to grow?</p>
             <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-              Submit a project request and tell us what you need built, fixed,
-              or automated.
+              Tell us about your business and what you need built, fixed, or
+              automated.
             </p>
             <div className="mt-6">
               <Button href="#contact" className="w-full sm:w-auto">
-                Start a Project
+                Start Your Project
               </Button>
             </div>
           </div>

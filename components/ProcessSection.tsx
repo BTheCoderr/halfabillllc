@@ -1,3 +1,4 @@
+import { FadeInSection } from "@/components/FadeInSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { processSteps } from "@/lib/site-data";
 
@@ -11,16 +12,16 @@ export function ProcessSection() {
           eyebrow="Process"
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {processSteps.map((step, index) => (
-            <article key={step.title} className="relative">
+            <FadeInSection key={step.title} delay={index * 70} className="relative">
               {index < processSteps.length - 1 && (
                 <div
                   className="absolute top-10 hidden h-px w-full bg-gradient-to-r from-brand-gold/40 to-transparent lg:block"
                   aria-hidden="true"
                 />
               )}
-              <div className="glass-card glass-card-hover h-full rounded-2xl p-7">
+              <div className="glass-card glass-card-hover h-full rounded-2xl p-6 lg:p-7">
                 <span className="font-mono text-2xl font-bold text-brand-gold">
                   {step.step}
                 </span>
@@ -31,7 +32,7 @@ export function ProcessSection() {
                   {step.description}
                 </p>
               </div>
-            </article>
+            </FadeInSection>
           ))}
         </div>
       </div>

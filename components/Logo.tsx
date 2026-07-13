@@ -49,7 +49,7 @@ export function Logo({
   if (variant === "horizontal") {
     return (
       <svg
-        viewBox="0 0 236 48"
+        viewBox="0 0 272 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={`${dims} ${className}`}
@@ -67,9 +67,9 @@ export function Logo({
           y="31"
           fill={logoColors.white}
           fontFamily="var(--font-geist-sans), system-ui, -apple-system, sans-serif"
-          fontSize="19"
+          fontSize="17"
           fontWeight="700"
-          letterSpacing="-0.02em"
+          letterSpacing="-0.01em"
         >
           {logoCopy.name}
         </text>
@@ -100,9 +100,9 @@ export function Logo({
         textAnchor="middle"
         fill={logoColors.white}
         fontFamily="var(--font-geist-sans), system-ui, -apple-system, sans-serif"
-        fontSize="18"
+        fontSize="14.5"
         fontWeight="700"
-        letterSpacing="-0.02em"
+        letterSpacing="-0.01em"
       >
         {logoCopy.name}
       </text>

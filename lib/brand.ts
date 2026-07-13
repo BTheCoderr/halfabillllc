@@ -1,4 +1,4 @@
-/** Brand colors for the HalfABilAgency black, white, and metallic gold system */
+/** Brand colors for the Half A Bil Agency black, white, and metallic gold system */
 export const logoColors = {
   gold: "#D4AF37",
   goldLight: "#F2D675",
@@ -11,7 +11,7 @@ export const logoColors = {
 } as const;
 
 export const logoCopy = {
-  name: "HalfABilAgency",
+  name: "Half A Bil Agency",
   tagline: "Full Service Half A Bil.",
-  desc: "Logo for HalfABilAgency, a website, app, AI, and automation agency.",
+  desc: "Logo for Half A Bil Agency, a website, CRM, automation, and AI agency for local businesses.",
 } as const;

@@ -1,20 +1,13 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { ProblemSection } from "@/components/ProblemSection";
-import { ProofOfWorkSection } from "@/components/ProofOfWorkSection";
-import { ServicesSection } from "@/components/ServicesSection";
-import { ServicesConfigurator } from "@/components/ServicesConfigurator";
-import { WhatWeBuildSection } from "@/components/WhatWeBuildSection";
-import { RecentBuildsSection } from "@/components/RecentBuildsSection";
-import { BuiltSystemsFlowSection } from "@/components/BuiltSystemsFlowSection";
-import { LiveSystemStackSection } from "@/components/LiveSystemStackSection";
-import { TechCapabilitiesSection } from "@/components/TechCapabilitiesSection";
 import { WhyAgencySection } from "@/components/WhyAgencySection";
-import { OfferSection } from "@/components/OfferSection";
+import { ServicesSection } from "@/components/ServicesSection";
+import { RecentBuildsSection } from "@/components/RecentBuildsSection";
 import { ProcessSection } from "@/components/ProcessSection";
-import { FounderSection } from "@/components/FounderSection";
-import { CTASection } from "@/components/CTASection";
-import { PaymentSection } from "@/components/PaymentSection";
+import { OfferSection } from "@/components/OfferSection";
+import { FAQSection } from "@/components/FAQSection";
+import { BookingSection } from "@/components/BookingSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
@@ -25,20 +18,13 @@ export default function Home() {
       <main>
         <Hero />
         <ProblemSection />
-        <ProofOfWorkSection />
-        <ServicesSection />
-        <ServicesConfigurator />
-        <WhatWeBuildSection />
-        <RecentBuildsSection />
-        <BuiltSystemsFlowSection />
-        <LiveSystemStackSection />
-        <TechCapabilitiesSection />
         <WhyAgencySection />
-        <OfferSection />
+        <ServicesSection />
+        <RecentBuildsSection />
         <ProcessSection />
-        <FounderSection />
-        <CTASection />
-        <PaymentSection />
+        <OfferSection />
+        <FAQSection />
+        <BookingSection />
         <ContactSection />
       </main>
       <Footer />

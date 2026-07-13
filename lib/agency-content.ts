@@ -121,37 +121,26 @@ export const techCapabilities = [
 export type WhyCard = {
   title: string;
   description: string;
+  icon: LucideIcon;
 };
 
 export const whyAgencyCards: WhyCard[] = [
   {
-    title: "Built by a real builder",
+    title: "Built for Local Businesses",
     description:
-      "Founder-built projects across websites, apps, and automations — not outsourced pitch decks.",
+      "We build specifically for dog groomers, contractors, cleaning companies, HVAC, restaurants, law firms, and other local service businesses — not generic tech theater.",
+    icon: Users,
   },
   {
-    title: "Practical systems, not tech theater",
+    title: "One Partner",
     description:
-      "Every build ties back to leads, bookings, follow-up, or operations that actually run.",
+      "Your website, CRM, automation, and AI tools all come from one team, so nothing falls into the gap between vendors who do not talk to each other.",
+    icon: Workflow,
   },
   {
-    title: "Clear pricing before work starts",
+    title: "Growth Focused",
     description:
-      "Starter packages and scoped deposits so you know the path before committing.",
-  },
-  {
-    title: "Fast launch path",
-    description:
-      "Focused MVPs and website systems designed to ship, test, and improve — not stall in planning.",
-  },
-  {
-    title: "Website + app + automation thinking",
-    description:
-      "One partner for the site, the product flow, and the workflows behind the business.",
-  },
-  {
-    title: "Lead capture to payment flow",
-    description:
-      "Forms, CRM handoff, GoHighLevel booking, and Stripe deposit links wired into one system.",
+      "Every build is measured by one thing: does it help you capture more leads, book more jobs, and save you time. Not how it looks in a portfolio.",
+    icon: LayoutDashboard,
   },
 ];

@@ -8,7 +8,7 @@ export function FooterBrand() {
       <Link
         href="#top"
         className="group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-gold"
-        aria-label="HalfABilAgency home"
+        aria-label="Half A Bil Agency home"
       >
         <LogoMark
           className="h-14 w-14 sm:h-[72px] sm:w-[72px]"

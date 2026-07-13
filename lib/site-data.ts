@@ -9,14 +9,16 @@ export function isLivePaymentUrl(url: string): boolean {
 }
 
 export const siteConfig = {
-  name: "HalfABilAgency",
+  name: "Half A Bil Agency",
   brandLine: "Full Service Half A Bil.",
-  tagline: "Websites. Apps. Automations.",
+  tagline: "Websites. CRM. Automation. AI.",
   email: "hello@halfabilagency.com",
   phone: "(401) 217-9799",
   phoneTel: "4012179799",
   /** GoHighLevel booking widget for discovery calls. */
   bookingUrl: "https://api.leadconnectorhq.com/widget/booking/hwhx4ZZKDiXfSr3VSgrm",
+  /** GoHighLevel booking widget ID, used for the embedded calendar section. */
+  bookingWidgetId: "hwhx4ZZKDiXfSr3VSgrm",
   /** Set NEXT_PUBLIC_STRIPE_STARTER_PAYMENT_URL in Netlify env (Stripe Payment Link). */
   starterPaymentUrl: readPublicPaymentUrl("NEXT_PUBLIC_STRIPE_STARTER_PAYMENT_URL"),
   /** Set NEXT_PUBLIC_STRIPE_SYSTEM_PAYMENT_URL in Netlify env (Stripe Payment Link). */
@@ -31,11 +33,10 @@ export const siteConfig = {
 
 export const navLinks = [
   { label: "Services", href: "#services" },
-  { label: "Proof", href: "#proof" },
-  { label: "Work", href: "#work" },
-  { label: "Systems", href: "#systems" },
+  { label: "Portfolio", href: "#work" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Start a Project", href: "#contact" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Contact", href: "#contact" },
 ];
 
 /** Booking page for discovery calls; falls back to the project form if unset. */
@@ -45,11 +46,9 @@ export function getBookingHref(): string {
 
 export const footerLinks = [
   { label: "Services", href: "#services" },
-  { label: "Proof", href: "#proof" },
-  { label: "Work", href: "#work" },
-  { label: "Systems", href: "#systems" },
+  { label: "Portfolio", href: "#work" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Start a Project", href: "#contact" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export const problemCards = [
@@ -79,135 +78,215 @@ export const problemCards = [
   },
 ];
 
-export const services = [
+export type Service = {
+  title: string;
+  description: string;
+  icon: string;
+  comingSoon?: boolean;
+};
+
+export const services: Service[] = [
   {
     title: "Website Design",
     description:
-      "Modern websites that help businesses look credible, explain what they do, and convert visitors into leads.",
+      "A modern, mobile-friendly website that explains what you do, builds trust, and turns visitors into booked jobs.",
     icon: "Layout",
   },
   {
-    title: "Apps and MVPs",
+    title: "Website Redesign",
     description:
-      "Web and mobile apps for startup ideas, customer portals, internal tools, booking platforms, and dashboards.",
-    icon: "Smartphone",
+      "Already have a site but it looks outdated or does not convert? We rebuild it around clarity, speed, and leads.",
+    icon: "RefreshCw",
   },
   {
-    title: "Business Automations",
+    title: "CRM Setup",
     description:
-      "Systems that handle forms, reminders, lead routing, emails, task updates, spreadsheets, and follow-ups automatically.",
+      "One place to track every lead and customer from first contact to closed job, so nothing falls through the cracks.",
+    icon: "Users",
+  },
+  {
+    title: "Business Automation",
+    description:
+      "Automated follow-ups, reminders, and internal workflows that save you hours of manual admin every week.",
     icon: "Workflow",
   },
   {
-    title: "AI Workflow Setup",
+    title: "Lead Capture Systems",
     description:
-      "Practical AI systems for intake, support, admin work, content, research, summaries, and business operations.",
+      "Forms, chat widgets, and intake flows built to capture every inquiry and route it straight into your CRM.",
+    icon: "Inbox",
+  },
+  {
+    title: "Appointment Booking",
+    description:
+      "An online calendar that lets customers book themselves in, with automatic reminders to cut down no-shows.",
+    icon: "Calendar",
+  },
+  {
+    title: "Google Business Profile",
+    description:
+      "A fully optimized profile so your business shows up, looks credible, and gets found by local customers searching now.",
+    icon: "MapPin",
+  },
+  {
+    title: "SEO Foundations",
+    description:
+      "The on-page and technical SEO fundamentals that help your website get found in local search results.",
+    icon: "Search",
+  },
+  {
+    title: "AI Solutions",
+    description:
+      "AI-powered intake, support, and admin tools built specifically for local service businesses.",
     icon: "Sparkles",
-  },
-  {
-    title: "Landing Pages",
-    description:
-      "Focused pages for ads, events, services, products, music, launches, and local business campaigns.",
-    icon: "Rocket",
-  },
-  {
-    title: "Digital Cleanup",
-    description:
-      "We fix messy tech stacks, broken forms, confusing workflows, bad websites, and disconnected tools.",
-    icon: "Wrench",
+    comingSoon: true,
   },
 ];
 
-export const systemSteps = [
-  { label: "Capture the lead", icon: "Inbox" },
-  { label: "Qualify the request", icon: "Filter" },
-  { label: "Book the call", icon: "Calendar" },
-  { label: "Send the follow-up", icon: "Send" },
-  { label: "Track the customer", icon: "Users" },
-  { label: "Automate the next step", icon: "Zap" },
-];
+export type PricingPlan = {
+  name: string;
+  tagline: string;
+  price: string;
+  cadence?: string;
+  features: string[];
+  highlighted?: boolean;
+  comingSoon?: boolean;
+  ctaLabel: string;
+  stripeUrlKey?: "starterPaymentUrl" | "systemPaymentUrl";
+};
 
-export const packages = [
+export const pricingPlans: PricingPlan[] = [
   {
-    name: "Starter Website",
-    tagline: "For businesses that need a credible online presence fast.",
-    price: "Starting at $500",
+    name: "Website Build Deposit",
+    tagline: "Reserve your project and kick off discovery and design.",
+    price: "$500",
+    cadence: "one-time",
     features: [
-      "One-page website",
-      "Mobile-friendly design",
-      "Contact form",
-      "Clear calls to action",
-      "Basic SEO setup",
-      "Launch support",
+      "Locks in your project slot",
+      "Discovery call and project scope",
+      "Design direction and site plan",
+      "Applied toward your final build cost",
     ],
-    highlighted: false,
+    ctaLabel: "Pay Deposit",
+    stripeUrlKey: "starterPaymentUrl",
   },
   {
-    name: "Business System Build",
-    tagline:
-      "For businesses that need a website plus booking, forms, payments, or automation.",
-    price: "Starting at $1,500",
+    name: "Starter Website Plan",
+    tagline: "For businesses that just need a solid site that stays online and up to date.",
+    price: "$97",
+    cadence: "/month",
     features: [
-      "Multi-section website or landing page",
-      "Intake form",
-      "Booking or payment setup",
-      "CRM or spreadsheet workflow",
-      "Automated email follow-up",
-      "Launch support",
+      "Hosting",
+      "Maintenance",
+      "Basic CRM",
+      "Website updates",
+      "Email support",
     ],
+    ctaLabel: "Get Started",
+  },
+  {
+    name: "Growth Plan",
+    tagline: "For businesses ready to turn their website into a lead-generating system.",
+    price: "$197",
+    cadence: "/month",
     highlighted: true,
+    features: [
+      "Everything in Starter",
+      "Lead capture",
+      "CRM",
+      "Review requests",
+      "Appointment booking",
+      "Email automation",
+      "Priority support",
+    ],
+    ctaLabel: "Get Started",
   },
   {
-    name: "Custom App or Automation",
-    tagline:
-      "For businesses that need a custom app, portal, dashboard, internal tool, or advanced automation.",
-    price: "Quote after consultation",
+    name: "AI Solutions",
+    tagline: "AI-powered tools built for local service businesses.",
+    price: "Coming Soon",
     features: [
-      "Discovery call",
-      "Workflow mapping",
-      "Custom build",
-      "Testing",
-      "Launch support",
+      "AI intake and lead qualification",
+      "AI customer support assistant",
+      "AI admin and back-office automation",
     ],
-    highlighted: false,
+    comingSoon: true,
+    ctaLabel: "Coming Soon",
   },
 ];
 
 export const processSteps = [
   {
     step: "01",
-    title: "Discover",
+    title: "Discovery Call",
     description:
-      "We learn what you need, what is broken, and what the business goal is.",
+      "We learn about your business, your customers, and what is holding your growth back.",
   },
   {
     step: "02",
-    title: "Map",
+    title: "Planning",
     description:
-      "We map the website, app, automation, or workflow before building.",
+      "We map the website, CRM, and automations you need and give you clear pricing before work starts.",
   },
   {
     step: "03",
     title: "Build",
-    description: "We design, build, test, and keep the project moving.",
+    description:
+      "We design, build, and connect your website, CRM, and automations, keeping you updated the whole way.",
   },
   {
     step: "04",
     title: "Launch",
     description:
-      "We help you go live and make sure the system works in the real world.",
+      "We go live, test every form and flow, and make sure leads are landing exactly where they should.",
+  },
+  {
+    step: "05",
+    title: "Growth",
+    description:
+      "We stay on as your ongoing partner, improving the system as your business grows.",
   },
 ];
 
-export const useCases = [
-  "Restaurant website with online ordering links",
-  "Contractor lead form with instant follow-up",
-  "Salon booking page with reminders",
-  "Nonprofit intake and volunteer system",
-  "Creator or artist landing page",
-  "Startup MVP app",
-  "AI customer intake assistant",
-  "Internal dashboard for leads and jobs",
-  "Payment and booking flow",
-  "Automated email and text follow-up system",
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export const faqs: FaqItem[] = [
+  {
+    question: "How much does a website cost?",
+    answer:
+      "Most projects start with a $500 website build deposit, which locks in your slot and is applied toward your final build cost. Final pricing depends on the size and features of the site, and you will always know the full price before any work begins.",
+  },
+  {
+    question: "Do you offer payment plans?",
+    answer:
+      "Yes. Projects typically start with a deposit, and the remaining balance can be split into milestone payments. After launch, our Starter and Growth plans are simple monthly plans instead of one large upfront cost.",
+  },
+  {
+    question: "How long does a project take?",
+    answer:
+      "Most websites launch within 2 to 4 weeks of the discovery call, depending on scope and how quickly we get content and feedback from you. CRM and automation setups are usually scoped and delivered on a similar timeline.",
+  },
+  {
+    question: "Can you redesign my website?",
+    answer:
+      "Yes. If your current site looks outdated, loads slowly, or is not converting visitors into leads, we can rebuild it from the ground up while keeping the parts of your brand that already work.",
+  },
+  {
+    question: "Can you automate my business?",
+    answer:
+      "Yes. We build practical automations for lead follow-up, appointment reminders, review requests, and internal notifications, so less of your day goes to manual admin work.",
+  },
+  {
+    question: "Do you build mobile apps?",
+    answer:
+      "Our core focus is websites, CRM, and automation for local service businesses. For businesses that need a dedicated mobile app or MVP, reach out and we will scope it with you on a discovery call.",
+  },
+  {
+    question: "What happens after launch?",
+    answer:
+      "You are not left on your own after launch. Our Starter and Growth plans include hosting, maintenance, and support so your site and systems keep running, and we are on call as your ongoing technology partner.",
+  },
 ];

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/Logo";
-import { getBookingHref, navLinks } from "@/lib/site-data";
+import { navLinks } from "@/lib/site-data";
 import { Button } from "@/components/ui/Button";
 
 export function Header() {
@@ -25,7 +25,7 @@ export function Header() {
   }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
-  const bookingHref = getBookingHref();
+  const bookingHref = "#booking";
 
   return (
     <header
@@ -40,7 +40,7 @@ export function Header() {
           href="#top"
           className="group flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-gold"
           onClick={closeMenu}
-          aria-label="HalfABilAgency home"
+          aria-label="Half A Bil Agency home"
         >
           <Logo
             variant="mark"
@@ -72,7 +72,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href={bookingHref}>Book a Free Call</Button>
+          <Button href={bookingHref}>Book Free Strategy Call</Button>
         </div>
 
         <button
@@ -107,7 +107,7 @@ export function Header() {
             ))}
             <li className="pt-4">
               <Button href={bookingHref} className="w-full" onClick={closeMenu}>
-                Book a Free Call
+                Book Free Strategy Call
               </Button>
             </li>
           </ul>

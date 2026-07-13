@@ -1,8 +1,26 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { HeroDashboard } from "@/components/HeroDashboard";
 import { HeroBrandLockup } from "@/components/HeroBrandLockup";
-import { getBookingHref } from "@/lib/site-data";
+
+const container = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.12, delayChildren: 0.05 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 16 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
+  },
+};
 
 export function Hero() {
   return (
@@ -17,42 +35,67 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:gap-16 lg:px-8">
-        <div>
-          <HeroBrandLockup />
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={container}
+        >
+          <motion.div variants={item}>
+            <HeroBrandLockup />
+          </motion.div>
 
-          <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[3.25rem]">
-            Websites, Apps, and Automations Built for Businesses That Need to{" "}
+          <motion.h1
+            variants={item}
+            className="text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[3.25rem]"
+          >
+            Stop Losing Customers Because Your{" "}
             <span className="bg-gradient-to-r from-brand-gold to-brand-gold-light bg-clip-text text-transparent">
-              Move Faster
+              Business Runs on Outdated Systems
             </span>
-          </h1>
+            .
+          </motion.h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
-            Websites, apps, MVPs, and automations — built fast, priced clearly,
-            wired into systems that capture leads and close work.
-          </p>
+          <motion.p
+            variants={item}
+            className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400"
+          >
+            Half A Bil Agency builds websites, CRM systems, and automations
+            that help local businesses generate more leads and save time.
+          </motion.p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button href={getBookingHref()}>
-              Book a Free Call
+          <motion.div
+            variants={item}
+            className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
+          >
+            <Button href="#booking">
+              Book Free Strategy Call
               <ArrowRight className="h-4 w-4" />
             </Button>
             <Button href="#contact" variant="secondary">
-              Start a Project
+              Start Your Project
             </Button>
-          </div>
+          </motion.div>
 
-          <p className="mt-8 flex items-start gap-2.5 text-sm text-zinc-500">
+          <motion.p
+            variants={item}
+            className="mt-8 flex items-start gap-2.5 text-sm text-zinc-500"
+          >
             <CheckCircle2
               className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold"
               aria-hidden="true"
             />
             Fast builds. Clear pricing. Practical systems your business can
             actually use.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <HeroDashboard />
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] as const }}
+        >
+          <HeroDashboard />
+        </motion.div>
       </div>
     </section>
   );
