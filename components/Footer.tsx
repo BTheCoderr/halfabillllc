@@ -47,9 +47,22 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="mt-14 border-t border-white/5 pt-8 text-center text-xs text-zinc-600">
-          &copy; {year} {siteConfig.name}. All rights reserved.
-        </p>
+        <div className="mt-14 flex flex-col items-center gap-3 border-t border-white/5 pt-8 text-center text-xs text-zinc-600 sm:flex-row sm:justify-between">
+          <p>
+            &copy; {year} {siteConfig.name}. All rights reserved.
+          </p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="transition-colors hover:text-brand-gold">
+              Privacy Policy
+            </Link>
+            <span className="text-zinc-700" aria-hidden="true">
+              &middot;
+            </span>
+            <Link href="/terms" className="transition-colors hover:text-brand-gold">
+              Terms of Service
+            </Link>
+          </div>
+        </div>
       </div>
     </footer>
   );
