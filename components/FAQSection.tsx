@@ -7,6 +7,8 @@ import { FadeInSection } from "@/components/FadeInSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { faqs } from "@/lib/site-data";
 
+const easeSmooth = [0.16, 1, 0.3, 1] as const;
+
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -17,7 +19,7 @@ export function FAQSection() {
         <SectionHeading
           eyebrow="FAQ"
           title="Questions You're Probably Asking"
-          subtitle="Straight answers to the things most business owners want to know before they start a project."
+          subtitle="Everything business owners ask before getting started."
         />
 
         <div className="space-y-3">
@@ -41,7 +43,7 @@ export function FAQSection() {
                     </span>
                     <motion.span
                       animate={{ rotate: isOpen ? 180 : 0 }}
-                      transition={{ duration: 0.25, ease: "easeOut" }}
+                      transition={{ duration: 0.28, ease: easeSmooth }}
                       className="shrink-0 rounded-full bg-brand-gold/10 p-1.5 text-brand-gold"
                     >
                       <ChevronDown className="h-4 w-4" aria-hidden="true" />
@@ -54,10 +56,13 @@ export function FAQSection() {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        transition={{
+                          height: { duration: 0.28, ease: easeSmooth },
+                          opacity: { duration: 0.2, ease: "easeOut" },
+                        }}
                         className="overflow-hidden"
                       >
-                        <p className="px-5 pb-6 text-sm leading-relaxed text-zinc-400 sm:px-7 sm:text-base">
+                        <p className="-mt-1.5 px-5 pb-6 text-sm leading-relaxed text-zinc-300 sm:px-7 sm:text-base">
                           {faq.answer}
                         </p>
                       </motion.div>

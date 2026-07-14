@@ -287,36 +287,36 @@ export const faqs: FaqItem[] = [
   {
     question: "How much does a website cost?",
     answer:
-      "Most projects start with a $500 website build deposit, which locks in your slot and is applied toward your final build cost. Final pricing depends on the size and features of the site, and you will always know the full price before any work begins.",
+      "Most websites start with a $500 deposit. You'll receive a fixed quote before any work begins, so there are no surprises.",
   },
   {
     question: "Do you offer payment plans?",
     answer:
-      "Yes. Projects typically start with a deposit, and the remaining balance can be split into milestone payments. After launch, our Starter and Growth plans are simple monthly plans instead of one large upfront cost.",
+      "Yes. Larger projects can be split into milestone payments so you don't have to pay everything upfront.",
   },
   {
     question: "How long does a project take?",
     answer:
-      "Most websites launch within 2 to 4 weeks of the discovery call, depending on scope and how quickly we get content and feedback from you. CRM and automation setups are usually scoped and delivered on a similar timeline.",
+      "Most websites launch within one week. Larger websites, apps, or custom software may take longer.",
   },
   {
     question: "Can you redesign my website?",
     answer:
-      "Yes. If your current site looks outdated, loads slowly, or is not converting visitors into leads, we can rebuild it from the ground up while keeping the parts of your brand that already work.",
+      "Absolutely. If your current website looks outdated or isn't bringing in customers, we'll rebuild it while keeping what already works.",
   },
   {
     question: "Can you automate my business?",
     answer:
-      "Yes. We build practical automations for lead follow-up, appointment reminders, review requests, and internal notifications, so less of your day goes to manual admin work.",
+      "Yes. We automate follow-ups, appointment reminders, lead routing, review requests, and other repetitive tasks that save you time.",
   },
   {
-    question: "Do you build mobile apps?",
+    question: "Can you build custom software?",
     answer:
-      "Our core focus is websites, CRM, and automation for local service businesses. For businesses that need a dedicated mobile app or MVP, reach out and we will scope it with you on a discovery call.",
+      "Yes. While most clients need websites and automations, we also build custom software and mobile apps for businesses that need something more advanced.",
   },
   {
     question: "What happens after launch?",
     answer:
-      "You are not left on your own after launch. Our Starter and Growth plans include hosting, maintenance, and support so your site and systems keep running, and we are on call as your ongoing technology partner.",
+      "We don't disappear after launch. We offer hosting, updates, support, and ongoing improvements as your business grows.",
   },
 ];
