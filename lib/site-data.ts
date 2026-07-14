@@ -150,9 +150,8 @@ export type PricingPlan = {
   cadence?: string;
   features: string[];
   highlighted?: boolean;
-  comingSoon?: boolean;
   ctaLabel: string;
-  stripeUrlKey?: "starterPaymentUrl" | "systemPaymentUrl";
+  href: string;
 };
 
 export const pricingPlans: PricingPlan[] = [
@@ -168,50 +167,81 @@ export const pricingPlans: PricingPlan[] = [
       "Applied toward your final build cost",
     ],
     ctaLabel: "Pay Deposit",
-    stripeUrlKey: "starterPaymentUrl",
+    href: "https://link.fastpaydirect.com/payment-link/6a558abe6eb859b10b7841c6",
   },
   {
-    name: "Starter Website Plan",
+    name: "Starter Plan",
     tagline: "For businesses that just need a solid site that stays online and up to date.",
     price: "$97",
     cadence: "/month",
     features: [
       "Hosting",
-      "Maintenance",
-      "Basic CRM",
-      "Website updates",
-      "Email support",
+      "Security updates",
+      "Small website edits",
+      "CRM support",
+      "Monthly maintenance",
+      "Priority support",
     ],
     ctaLabel: "Get Started",
+    href: "https://link.fastpaydirect.com/payment-link/6a558c336eb859b10b7841ca",
   },
   {
     name: "Growth Plan",
-    tagline: "For businesses ready to turn their website into a lead-generating system.",
+    tagline: "A complete growth system for businesses ready to generate more leads and automate follow-up.",
     price: "$197",
     cadence: "/month",
     highlighted: true,
     features: [
       "Everything in Starter",
-      "Lead capture",
-      "CRM",
-      "Review requests",
-      "Appointment booking",
-      "Email automation",
+      "Professional website hosting",
+      "CRM setup and management",
+      "Lead capture forms",
+      "Appointment booking integration",
+      "Automated email and SMS follow-up",
+      "Reputation management setup",
       "Priority support",
     ],
     ctaLabel: "Get Started",
+    href: "https://link.fastpaydirect.com/payment-link/6a558d68a655fa0b802a4168",
   },
   {
-    name: "AI Solutions",
-    tagline: "AI-powered tools built for local service businesses.",
-    price: "Coming Soon",
+    name: "AI Receptionist",
+    tagline: "Never miss another lead — answers, qualifies, and books appointments 24/7.",
+    price: "$297",
+    cadence: "/month",
     features: [
-      "AI intake and lead qualification",
-      "AI customer support assistant",
-      "AI admin and back-office automation",
+      "AI Chat Assistant",
+      "Instant Lead Responses",
+      "Automated SMS",
+      "Missed Call Text Back",
+      "Appointment Booking",
+      "Lead Qualification",
     ],
-    comingSoon: true,
-    ctaLabel: "Coming Soon",
+    ctaLabel: "Get Started",
+    href: "https://link.fastpaydirect.com/payment-link/6a558e092fb6fb8e1dcdf112",
+  },
+  {
+    name: "Business Operating System",
+    tagline: "Everything Half A Bil Agency offers, bundled into one all-in-one system.",
+    price: "$497",
+    cadence: "/month",
+    features: [
+      "Professional Website",
+      "CRM",
+      "AI Receptionist",
+      "Automations",
+      "Reputation Management",
+      "Review Requests",
+      "Appointment Booking",
+      "Missed Call Text Back",
+      "Email Marketing",
+      "SMS Marketing",
+      "Monthly Analytics",
+      "Priority Support",
+      "AI Employee",
+    ],
+    ctaLabel: "Get Started",
+    href: "https://link.fastpaydirect.com/payment-link/6a558e892fb6fb8e1dcdf114",
   },
 ];
 
