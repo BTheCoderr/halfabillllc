@@ -52,10 +52,16 @@ export function ContactSection() {
               </span>
             </div>
 
-            <div className="min-h-[900px] overflow-hidden rounded-2xl bg-white shadow-[0_20px_60px_-15px_rgba(212,175,55,0.15)] ring-1 ring-brand-gold/15">
+            <div className="min-h-[900px] overflow-hidden rounded-2xl bg-black/20 shadow-[0_20px_60px_-15px_rgba(212,175,55,0.15)] ring-1 ring-brand-gold/15">
               <iframe
                 src={`https://api.leadconnectorhq.com/widget/form/${GHL_FORM_ID}`}
-                style={{ width: "100%", height: "100%", border: "none", borderRadius: "16px" }}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  border: "none",
+                  borderRadius: "16px",
+                  background: "transparent",
+                }}
                 id={`inline-${GHL_FORM_ID}`}
                 scrolling="no"
                 data-layout='{"id":"INLINE"}'

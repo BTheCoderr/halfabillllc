@@ -46,6 +46,7 @@ npm run start   # serve the production build
 - `lib/agency-content.ts` — "Why Us" card content
 - `lib/intake.ts` — portfolio project data
 - `components/ContactSection.tsx` / `components/BookingSection.tsx` — GoHighLevel form and booking embeds
+- `docs/GHL_FORM_CUSTOM_CSS.md` — brand-matched Custom CSS to paste into the GoHighLevel form builder (the embedded form's internal fields live cross-origin, so they can only be restyled from inside GHL's own Custom CSS setting, not from this codebase)
 
 ## Deployment
 
