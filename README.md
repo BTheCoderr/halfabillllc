@@ -1,5 +1,11 @@
 # Half A Bil Agency
 
+<!-- repo-intro:start -->
+**Project snapshot:** Half A Bil Agency is a conversion-focused marketing site for websites, CRM setup, automation, lead capture, appointment booking, and AI solutions for local service businesses.
+
+**What it demonstrates:** Next.js · TypeScript · Tailwind CSS · Framer Motion · embedded booking/forms · agency conversion UX.
+<!-- repo-intro:end -->
+
 **Full Service Half A Bil.**
 
 Marketing site for Half A Bil Agency — websites, CRM setup, business automation, lead capture, appointment booking, and AI solutions built for local service businesses. Built with [Next.js](https://nextjs.org), React, TypeScript, Tailwind CSS, and Framer Motion, deployed on Netlify.
