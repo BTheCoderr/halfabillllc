@@ -1,9 +1,9 @@
 # Half A Bil Agency
 
 <!-- repo-intro:start -->
-**Project snapshot:** Half A Bil Agency is a conversion-focused marketing site for websites, CRM setup, automation, lead capture, appointment booking, and AI solutions for local service businesses.
+**Project snapshot:** Half A Bil Agency is a production marketing site for web, CRM, automation, lead capture, appointment booking, and AI services aimed at local businesses.
 
-**What it demonstrates:** Next.js · TypeScript · Tailwind CSS · Framer Motion · embedded booking/forms · agency conversion UX.
+**What it demonstrates:** Next.js · React · TypeScript · Tailwind CSS · Framer Motion · GoHighLevel conversion workflows.
 <!-- repo-intro:end -->
 
 **Full Service Half A Bil.**
